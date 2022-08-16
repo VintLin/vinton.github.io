@@ -134,10 +134,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://voterlin.github.io/categories/">
+  <link rel="canonical" href="https://voterlin.github.io/cn/Flutter-Sharing-1/">
   <title>
     
-      Categories - Voter&#39;s
+      「Flutter」跨平台技术演进 - Voter&#39;s
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -285,29 +285,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="categories/index.html">
-      
-      
-      <option value="en" >
-        English
-      </option>
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -359,19 +337,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('img/header_img/categories_bg.jpg');
-      --intro-header-background-image-url-page: url('/img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/categories_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg.jpg');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/categories_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg.jpg'); */
       
     }
 
@@ -393,10 +371,44 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>Categories</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">Hi , here is Categories ....</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Flutter" title="Flutter">Flutter</a>
+              
+              <a class="tag" href="/tags/#技术分享" title="技术分享">技术分享</a>
+              
+            </div>
+            <h1>「Flutter」跨平台技术演进</h1>
+            <h2 class="subheading">Flutter技术分享...</h2>
+            <span class="meta">
+              Posted by Voter on
+              2020-02-07
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">2</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">729</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -437,100 +449,192 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <!-- 分类页面 -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-      
+        <h2 id="前言">前言</h2>
+<p><img src="1_time_spent.jpg" alt="使用时长"><br>
+这是来自eMarketer的两份市场调研数据，左边是中国人均多媒体设备使用时长，右边是中国人均移动智能设备使用时长，可以看到2019年到2020年移动设备使用时长上涨了17%，之后两年预计还会再以10+%上的速度继续上涨。</p>
+<p>反观总的多媒体设备使用时长上涨的并没有那么多，说明移动设备在逐渐替代以PC和平板为主的其他多媒体设备，那对于移动设备使用时长其实大部分还是集中在移动应用而不是移动端网页上。也就是说未来几年移动应用市场还是在向好的方向发展。</p>
+<p>但是，这些增长迅猛的使用时长，并不会平均分配给手机上的每个应用，实际上，会被用户所发现并且持续使用的应用大概只会在20个左右，在将来新应用出现在用户的手机主页面上将会越来越难。<br>
+<img src="2_high_quality.png" alt="高品质"><br>
+那在这个背景下用户向往的是高质量的应用，高质量指的是有实用的功能，有设计感的界面和流畅的交互。</p>
+<p>而对于移动应用开发商来说，接下来面对的是新品应该如何抢占市场，而在之前已经站稳脚跟的产品又应该如何提升品质，建立起护城河的问题。</p>
+<p>那对于这些问题对策自然就是，在保证产品质量的前提下 1.提升开发效率 2.缩减开发成本 做到快速落地应用的同时，提高应用的更新速度，根据市场反馈实时调整方向。</p>
+<h3 id="跨平台框架">跨平台框架</h3>
+<p>对于前面的说的这些问题，做为解决方法之一的跨平台技术自然就因运而生了，那根据实现原理可以分为三类：<br>
+<img src="3_classify.png" alt="分类"></p>
+<h4 id="H5-原生平台">H5 + 原生平台</h4>
+<p>代表的技术有:<br>
+Cordova， Cordova的前身是2011年7月发布的PhoneGap，又在同年10月被Adobe收购，最后贡献给Apache成为开源项目后改成现在的名字。<br>
+Ionic，2013年发布至今已经发布到第四个大版本，现在最新的版本是ionic4。<br>
+微信小程序，2015年初发布了它的前身，​JS-SDK，它是WeixinJSBridge 包装整合而出的一整套网页开发工具包，方便开发者使用微信的原生能力。<br>
+<img src="4_H5.png" alt="H5+原生平台"></p>
+<h4 id="JavaScript开发-原生渲染">JavaScript开发 + 原生渲染</h4>
+<p>代表的技术有:<br>
+React Native，是Facebook在2015年发布。<br>
+Weex，阿里2016年4月开放内测邀请，在同年6月开源。<br>
+快应用，2018年3月份，由小米，OPPO，VIVO，华为等10家国内主流厂商成立的快应用联盟发布。<br>
+<img src="5_JavaScript.png" alt="JavaScript开发+原生渲染"></p>
+<h4 id="自绘UI引擎-原生平台">自绘UI引擎 + 原生平台</h4>
+<p>最后是以Flutter为代表的的跨平台技术实现方案。<br>
+<img src="6_Draw.png" alt="自绘UI引擎+原生平台"></p>
 
-      <!-- 标签云 -->
-      <div id='tag_cloud' class="tags">
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/Flutter-Sharing-2/" data-toggle="tooltip" data-placement="top" title="「Flutter」初识Flutter">&larr; Previous Post</a>
+          </li>
+          
+          
+        </ul>
+
         
-        <a href="#技术" title="技术" rel="3">技术</a>
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
         
+
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
       </div>
 
-      <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="技术">
-          <span class="tag-text">技术</span>
-        </span>
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
         
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/cn/Flutter-Sharing-1/">
-            <h2 class="post-title">
-              「Flutter」跨平台技术演进
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              Flutter技术分享...
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前言</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%A1%86%E6%9E%B6"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">跨平台框架</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#H5-%E5%8E%9F%E7%94%9F%E5%B9%B3%E5%8F%B0"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">H5 + 原生平台</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JavaScript%E5%BC%80%E5%8F%91-%E5%8E%9F%E7%94%9F%E6%B8%B2%E6%9F%93"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">JavaScript开发 + 原生渲染</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%87%AA%E7%BB%98UI%E5%BC%95%E6%93%8E-%E5%8E%9F%E7%94%9F%E5%B9%B3%E5%8F%B0"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">自绘UI引擎 + 原生平台</span></a></li></ol></li></ol></li></ol>
         
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/cn/Flutter-Sharing-2/">
-            <h2 class="post-title">
-              「Flutter」初识Flutter
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              Flutter技术分享...
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
         </div>
-        <hr>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
         
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/cn/Flutter-Sharing-3/">
-            <h2 class="post-title">
-              「Flutter」状态管理
-              
-              -- cn
-              
-            </h2>
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
             
-            <h3 class="post-subtitle">
-              Flutter技术分享...
-            </h3>
+            <a class="tag" href="/tags/#Flutter" title="Flutter">Flutter</a>
             
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
+            <a class="tag" href="/tags/#技术分享" title="技术分享">技术分享</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
         <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
         
       </div>
-      
-
     </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
