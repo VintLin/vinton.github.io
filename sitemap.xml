@@ -37,6 +37,27 @@
   </url>
   
   <url>
+    <loc>https://voterlin.github.io/cn/Factfulness/</loc>
+    
+    <lastmod>2022-05-11</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://voterlin.github.io/cn/The-Molecule-of-More/</loc>
+    
+    <lastmod>2022-01-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://voterlin.github.io/cn/Grandpa%E2%80%98s-Room/</loc>
+    
+    <lastmod>2021-03-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://voterlin.github.io/cn/Flutter-Sharing-3/</loc>
     
     <lastmod>2020-02-08</lastmod>
@@ -67,6 +88,20 @@
 
   
   <url>
+    <loc>https://voterlin.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://voterlin.github.io/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
+    <lastmod>2022-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://voterlin.github.io/tags/Flutter/</loc>
     <lastmod>2022-08-16</lastmod>
     <changefreq>daily</changefreq>
@@ -80,10 +115,38 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://voterlin.github.io/tags/%E6%83%85%E7%BB%AA/</loc>
+    <lastmod>2022-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://voterlin.github.io/tags/%E6%84%9F%E6%82%9F/</loc>
+    <lastmod>2022-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
+    <loc>https://voterlin.github.io/categories/%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2022-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://voterlin.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://voterlin.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2022-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
