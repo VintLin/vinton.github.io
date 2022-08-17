@@ -2,7 +2,7 @@
 
 .body--light {
   /* Common color */
-  --common-color: #0085a1;
+  --common-color: #337ab7;
   /* body */
   --background-color: #ffffff;
   /* header */
@@ -427,7 +427,7 @@ hr {
   --color-default: #404040;
   --blockquote-color: gray;
   --post-container-a-color: #337ab7;
-  --post-container-a-color-hover: #0085a1;
+  --post-container-a-color-hover: #205480;
   --table-border-color: #eee;
   /* tip */
   --tip-color: rgba(51, 51, 51, 0.9);
