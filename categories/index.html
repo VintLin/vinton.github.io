@@ -80,10 +80,6 @@
     <link rel="stylesheet" href="/css/livemylife.css"/>
 
     
-      <!-- wave start -->
-      <link rel="stylesheet" href="/css/wave.css"/>
-      <!-- wave end -->
-    
 
     
       <!-- top start (article top hot config) -->
@@ -243,9 +239,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -254,9 +250,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -358,20 +354,20 @@
   <style type="text/css">
     .body--light {
       /* intro-header */
-      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('img/header_img/categories_bg.jpg');
-      --intro-header-background-image-url-page: url('/img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-home: url('/img/header_img/bg_home.jpg');
+      --intro-header-background-image-url-post: url('img/header_img/bg_categories.jpg');
+      --intro-header-background-image-url-page: url('/img/header_img/bg_categories.jpg');
     }
     .body--dark {
-      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/categories_bg.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg_home.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/bg_categories.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg_categories.jpg');
     }
 
     header.intro-header {
        /*page*/
         background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/categories_bg.jpg'); */
+        /* background-image: url('/img/header_img/bg_categories.jpg'); */
       
     }
 
@@ -396,7 +392,7 @@
           <div class="site-heading">
             <h1>Categories</h1>
             <!--<hr class="small">-->
-            <span class="subheading">Hi , here is Categories ....</span>
+            <span class="subheading">People wait all week for friday, all year for summer, all life for happiness</span>
           </div>
           
         </div>
@@ -404,22 +400,6 @@
     </div>
   </div>
 
-  
-  <!-- waveoverlay start -->
-  <div class="preview-overlay">
-    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-      <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-      </defs>
-      <g class="preview-parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
-        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
-        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
-        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
-      </g>
-    </svg>
-  </div>
-  <!-- waveoverlay end -->
   
 
 </header>
@@ -448,66 +428,15 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
-        <a href="#阅读" title="阅读" rel="2">阅读</a>
-        
         <a href="#技术" title="技术" rel="3">技术</a>
         
         <a href="#生活" title="生活" rel="1">生活</a>
         
+        <a href="#阅读" title="阅读" rel="2">阅读</a>
+        
       </div>
 
       <!-- 标签列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="阅读">
-          <span class="tag-text">阅读</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/cn/Factfulness/">
-            <h2 class="post-title">
-              十种思维错误及应对建议
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              《事实》读书笔记
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/cn/The-Molecule-of-More/">
-            <h2 class="post-title">
-              贪婪的多巴胺
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              《贪婪的多巴胺》读书笔记
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
       
       <div class="one-tag-list">
         <span class="fa fa-tag listing-seperator" id="技术">
@@ -519,9 +448,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/Flutter-Sharing-2/">
+          <a href="/cn/Flutter-Sharing-1/">
             <h2 class="post-title">
-              「Flutter」初识Flutter
+              「Flutter」跨平台技术演进
               
               -- cn
               
@@ -541,9 +470,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/Flutter-Sharing-1/">
+          <a href="/cn/Flutter-Sharing-2/">
             <h2 class="post-title">
-              「Flutter」跨平台技术演进
+              「Flutter」初识Flutter
               
               -- cn
               
@@ -611,6 +540,57 @@
         
       </div>
       
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="阅读">
+          <span class="tag-text">阅读</span>
+        </span>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/cn/The-Molecule-of-More/">
+            <h2 class="post-title">
+              贪婪的多巴胺
+              
+              -- cn
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              《贪婪的多巴胺》读书笔记
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/cn/Factfulness/">
+            <h2 class="post-title">
+              十种思维错误及应对建议
+              
+              -- cn
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              《事实》读书笔记
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+      </div>
+      
 
     </div>
   </div>
@@ -624,6 +604,15 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center">
+          
+            <li>
+              <a href="/feed.xml">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           
 
           
