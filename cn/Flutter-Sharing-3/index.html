@@ -136,7 +136,7 @@
       「Flutter」状态管理 - Voter&#39;s Blog
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -225,10 +225,12 @@
 
           
           
+          
+          
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -248,9 +250,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
               
               
             </a>
@@ -258,12 +260,10 @@
           
           
           
-          
-          
           <li>
-            <a href="/archive/">
+            <a href="/tags/">
               
-              归档
+              标签
               
               
             </a>
@@ -441,7 +441,7 @@
 <blockquote>
 <p>了解前面的知识，就可以简单开发些小项目了，但是如果想要构建稍微复杂点的项目就不得不了解“状态管理”的概念，“状态管理”这是一个来自前端开发的名词，简单的来说当你问一个前端项目如何进行状态管理时，就等于问这个项目是如何设计的一样。</p>
 </blockquote>
-<h2 id="简介">简介</h2>
+<h2 id="简介-2">简介</h2>
 <p><img src="1_Start.png" alt="Start"></p>
 <p>因为，React、Vue等前端框架大行其道，响应式编程的理念也随之流行，在具体的项目中描述好UI和状态之间的关系后，我们只需要专注于状态的改变就好了，而框架将会根据我们的描述，自动根据状态来更新UI。不像在Android端常见的命令式编程，需要我们手动去指定控件展示的内容。<br>
 <img src="2_State_Manager.gif" alt="State_Manager"></p>
@@ -549,7 +549,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">状态管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flux%E3%80%81Redux%E3%80%81Fish-Redux"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Flux、Redux、Fish_Redux</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flux-%E7%BC%98%E8%B5%B7"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Flux : 缘起</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Facebook%E6%B6%88%E6%81%AF%E6%8F%90%E7%A4%BA%E9%97%AE%E9%A2%98"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">Facebook消息提示问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8D%E5%8F%AF%E9%A2%84%E6%B5%8B%E7%9A%84MVC"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">不可预测的MVC</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">解决方案</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Flux"><span class="toc-nav-number">1.3.4.</span> <span class="toc-nav-text">Flux</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Redux-%E4%BC%98%E5%8C%96Flux"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Redux : 优化Flux</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Redux%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">Redux特性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Fish-Redux%EF%BC%9A%E9%80%82%E9%85%8DFlutter"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">Fish_Redux：适配Flutter</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">状态管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-2"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flux%E3%80%81Redux%E3%80%81Fish-Redux"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Flux、Redux、Fish_Redux</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flux-%E7%BC%98%E8%B5%B7"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Flux : 缘起</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Facebook%E6%B6%88%E6%81%AF%E6%8F%90%E7%A4%BA%E9%97%AE%E9%A2%98"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">Facebook消息提示问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8D%E5%8F%AF%E9%A2%84%E6%B5%8B%E7%9A%84MVC"><span class="toc-nav-number">1.3.2.</span> <span class="toc-nav-text">不可预测的MVC</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-nav-number">1.3.3.</span> <span class="toc-nav-text">解决方案</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Flux"><span class="toc-nav-number">1.3.4.</span> <span class="toc-nav-text">Flux</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Redux-%E4%BC%98%E5%8C%96Flux"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Redux : 优化Flux</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Redux%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">Redux特性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Fish-Redux%EF%BC%9A%E9%80%82%E9%85%8DFlutter"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">Fish_Redux：适配Flutter</span></a></li></ol></li></ol>
         
         </div>
       </aside>
