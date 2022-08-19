@@ -88,10 +88,6 @@
     
 
     
-      <!-- ThemeColor start -->
-      <link rel="stylesheet" href="/css/scroll.css"/>
-      <!-- ThemeColor end -->
-    
 
     
       <!-- viewer start (Picture preview) -->
@@ -105,10 +101,6 @@
       <!-- Search end -->
     
 
-    
-      <!-- ThemeColor start -->
-      <link rel="stylesheet" href="/css/themecolor.css"/>
-      <!-- ThemeColor end -->
     
 
     
@@ -141,59 +133,10 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--light">
+	<body ontouchstart="" class="body--light">
 
 
 		<!-- ThemeColor -->
-		
-		<!-- ThemeColor -->
-<style type="text/css">
-  .body--light {
-    --light-mode: none;
-    --dark-mode: block;
-  }
-  .body--dark {
-    --light-mode: block;
-    --dark-mode: none;
-  }
-  i.mdui-icon.material-icons.light-mode {
-    display: var(--light-mode);
-  }
-  i.mdui-icon.material-icons.dark-mode {
-    display: var(--dark-mode);
-  }
-</style>
-<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
-  <i class="mdui-icon material-icons light-mode"></i>
-  <i class="mdui-icon material-icons dark-mode"></i>
-</div>
-<script>
-  //getCookieValue
-  function getCookieValue(a) {
-    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
-    return b
-      ? b.pop()
-      : '';
-  }
-  let themeMode = 'light';
-  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
-    let dbody = document.body.classList;
-    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
-  }
-
-  //setCookieValue
-  var toggleBtn = document.querySelector(".toggle");
-  toggleBtn.addEventListener("click", function () {
-    var e = document.body.classList.contains("body--dark");
-    var cookieString = e
-      ? "dark"
-      : "light";
-    var exp = new Date();
-    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
-    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
-  });
-</script>
-
 		
 
 		<!-- Gitter -->
@@ -220,7 +163,7 @@
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/">首页</a>
+            <a href="/">HOME</a>
           </li>
 
           
@@ -230,18 +173,7 @@
           <li>
             <a href="/about/">
               
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
+                ABOUT
               
               
             </a>
@@ -252,18 +184,7 @@
           <li>
             <a href="/archive/">
               
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              标签
+                ARCHIVES
               
               
             </a>
@@ -272,39 +193,14 @@
           
 
           
-          <li>
+          <li class="search-icon">
             <a class="popup-trigger">
-              <span class="search-icon"></span>搜索</a>
+              <i class="fa fa-search"></i>
+            </a>
           </li>
           
 
           <!-- LangSelect -->
-          
-          
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="tags/读书笔记/index.html">
-      
-      
-      <option value="en" >
-        English
-      </option>
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
-          
           
         </ul>
       </div>
@@ -389,7 +285,7 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
+          <div class="site-heading" >
             <h1>Voter&#39;s Blog</h1>
             <!--<hr class="small">-->
             <span class="subheading">A hero is the one who does what he can. The others don&#39;t.</span>
@@ -440,95 +336,154 @@
 
       
 
+      <!-- 标签云 -->
+      <div id='tag_cloud' class="tags tags-sup js-tags">
+        <a data-encode="" class="tag-button--all"> 
+          Show All
+          <sup>6</sup> 
+        </a>
+        
+        <a data-encode="Flutter" class="tag-button" title="Flutter" rel="3"> 
+          Flutter 
+          <sup>3</sup> 
+        </a>
+        
+        <a data-encode="%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB" class="tag-button" title="技术分享" rel="3"> 
+          技术分享 
+          <sup>3</sup> 
+        </a>
+        
+        <a data-encode="%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0" class="tag-button" title="读书笔记" rel="2"> 
+          读书笔记 
+          <sup>2</sup> 
+        </a>
+        
+        <a data-encode="%E6%96%B9%E6%B3%95%E8%AE%BA" class="tag-button" title="方法论" rel="2"> 
+          方法论 
+          <sup>2</sup> 
+        </a>
+        
+        <a data-encode="%E6%83%85%E7%BB%AA" class="tag-button" title="情绪" rel="1"> 
+          情绪 
+          <sup>1</sup> 
+        </a>
+        
+        <a data-encode="%E6%84%9F%E6%82%9F" class="tag-button" title="感悟" rel="1"> 
+          感悟 
+          <sup>1</sup> 
+        </a>
+        
+      </div>
+
       <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="listing-seperator" id="2022">
-          <span class="tag-text">2022</span>
-        </span>
-        <ul>
+      <div class="mini-post-list js-result">
+        
+          <section class="mini-post-list">
+            <span class="listing-seperator" id="2022">
+              <span class="tag-text">2022</span>
+            </span>
+            
+            <div class="post-preview item" data-tags="%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0,%E6%96%B9%E6%B3%95%E8%AE%BA">
+              <a href="/cn/Factfulness/">
+                <h2 class="post-title">
+                  十种思维错误及应对建议
+                </h2>
+                
+                <h3 class="post-subtitle">
+                  《事实》读书笔记
+                </h3>
+                
+              </a>
+            </div>
+            <hr>
+            
+            <div class="post-preview item" data-tags="%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0,%E6%96%B9%E6%B3%95%E8%AE%BA">
+              <a href="/cn/The-Molecule-of-More/">
+                <h2 class="post-title">
+                  贪婪的多巴胺
+                </h2>
+                
+                <h3 class="post-subtitle">
+                  《贪婪的多巴胺》读书笔记
+                </h3>
+                
+              </a>
+            </div>
+            <hr>
+            
+          </section>
           
-          <li>
-            05-11
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
-            <a href="/cn/Factfulness/" style="color: #0085a1">
-              <span>
-                十种思维错误及应对建议
-              </span>
-            </a>
-          </li>
+          <section class="mini-post-list">
+            <span class="listing-seperator" id="2021">
+              <span class="tag-text">2021</span>
+            </span>
+            
+            <div class="post-preview item" data-tags="%E6%83%85%E7%BB%AA,%E6%84%9F%E6%82%9F">
+              <a href="/cn/Grandpa‘s-Room/">
+                <h2 class="post-title">
+                  外公的房间
+                </h2>
+                
+                <h3 class="post-subtitle">
+                  有件事我们都要面对
+                </h3>
+                
+              </a>
+            </div>
+            <hr>
+            
+          </section>
           
-          <li>
-            01-28
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
-            <a href="/cn/The-Molecule-of-More/" style="color: #0085a1">
-              <span>
-                贪婪的多巴胺
-              </span>
-            </a>
-          </li>
+          <section class="mini-post-list">
+            <span class="listing-seperator" id="2020">
+              <span class="tag-text">2020</span>
+            </span>
+            
+            <div class="post-preview item" data-tags="Flutter,%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">
+              <a href="/cn/Flutter-Sharing-3/">
+                <h2 class="post-title">
+                  「Flutter」状态管理
+                </h2>
+                
+                <h3 class="post-subtitle">
+                  Flutter技术分享
+                </h3>
+                
+              </a>
+            </div>
+            <hr>
+            
+            <div class="post-preview item" data-tags="Flutter,%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">
+              <a href="/cn/Flutter-Sharing-2/">
+                <h2 class="post-title">
+                  「Flutter」初识Flutter
+                </h2>
+                
+                <h3 class="post-subtitle">
+                  Flutter技术分享
+                </h3>
+                
+              </a>
+            </div>
+            <hr>
+            
+            <div class="post-preview item" data-tags="Flutter,%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">
+              <a href="/cn/Flutter-Sharing-1/">
+                <h2 class="post-title">
+                  「Flutter」跨平台技术演进
+                </h2>
+                
+                <h3 class="post-subtitle">
+                  Flutter技术分享
+                </h3>
+                
+              </a>
+            </div>
+            <hr>
+            
+          </section>
           
-        </ul>
       </div>
-      
-      <div class="one-tag-list">
-        <span class="listing-seperator" id="2021">
-          <span class="tag-text">2021</span>
-        </span>
-        <ul>
-          
-          <li>
-            03-28
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
-            <a href="/cn/Grandpa‘s-Room/" style="color: #0085a1">
-              <span>
-                外公的房间
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="listing-seperator" id="2020">
-          <span class="tag-text">2020</span>
-        </span>
-        <ul>
-          
-          <li>
-            02-09
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
-            <a href="/cn/Flutter-Sharing-3/" style="color: #0085a1">
-              <span>
-                「Flutter」状态管理
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-08
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
-            <a href="/cn/Flutter-Sharing-2/" style="color: #0085a1">
-              <span>
-                「Flutter」初识Flutter
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-07
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
-            <a href="/cn/Flutter-Sharing-1/" style="color: #0085a1">
-              <span>
-                「Flutter」跨平台技术演进
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
     </div>
   </div>
 </div>
@@ -548,7 +503,7 @@
 ">
     
         <!-- Visitors -->
-<h5><a href="/">来访者</a></h5>
+<h5><a href="/">VISITORS</a></h5>
 
 <div class="widget">
   <span>
@@ -566,7 +521,7 @@
         <!-- Featured Tags -->
 
 <section>
-  <h5><a href="/tags/">特色标签</a></h5>
+  <h5><a href="/tags/">FEATURED TAGS</a></h5>
   <div class="tags">
     
     
@@ -601,7 +556,7 @@
     
         <!-- Short About -->
 <section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
+  <h5><a href="/about/">ABOUT ME</a></h5>
   <div class="short-about">
 
     
@@ -658,7 +613,7 @@
     
         <!-- RECENT POSTS -->
 
-<h5><a href="/">最近博文</a></h5>
+<h5><a href="/">RECENT POSTS</a></h5>
 <div class="widget">
   <ul>
     
@@ -680,40 +635,6 @@
     
     <a href="../../cn/Flutter-Sharing-2/">
       <li>「Flutter」初识Flutter</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Archives -->
-
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#阅读">
-      <li>阅读</li>
-    </a>
-    
-    <a href="/categories/#技术">
-      <li>技术</li>
-    </a>
-    
-    <a href="/categories/#生活">
-      <li>生活</li>
     </a>
     
   </ul>
@@ -778,9 +699,9 @@
           2022
           <br>
           Theme by
-          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <a target="_blank" rel="noopener" href="https://huangxuan.me/">Hux Blog</a>
           |
-          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=VoterLin&repo=VoterLin.github.io&type=star&count=true"></iframe>
         </p>
       </div>
     </div>
@@ -807,22 +728,11 @@
   
 
   
-    <!-- Scroll start -->
-    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
-    <!-- Scroll end -->
-  
-
-  
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
 
   
-    <!-- ribbon -->
-    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+
   
 
   
@@ -876,26 +786,19 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
+
 		<!-- Search -->
 		
-		<div class="popup search-popup local-search-popup">
-  <span class="popup-btn-close">
-    ESC
-  </span>
-  <div class="container">
+		<div class="popup search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
     <div class="row">
-      <!-- <div class="col-md-9 col-md-offset-1"> -->
-      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
-
-        <div class="local-search-header clearfix">
-
-          <div class="local-search-input-wrapper">
-            <span class="search-icon">
-              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
-            </span>
-            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
-          </div>
-        </div>
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 local-search-content">
+        <input autocomplete="off" placeholder="SEARCH..." type="text" id="search-input">
         <div id="local-search-result"></div>
       </div>
     </div>
@@ -920,15 +823,15 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
     // monitor main search box;
     var onPopupClose = function (e) {
       $('.popup').fadeOut(300);
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
+      $('#search-input').val('');
+      $('.search-results').remove();
       $('#no-result').remove();
       $('body').css('overflow', '');
     }
 
     function proceedsearch() {
       $('.popup').fadeIn(300);
-      var $localSearchInput = $('#local-search-input');
+      var $localSearchInput = $('#search-input');
       $localSearchInput.attr("autocapitalize", "none");
       $localSearchInput.attr("autocorrect", "off");
       $localSearchInput.focus();
@@ -980,6 +883,9 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             var isMatch = false;
             var hitCount = 0;
             var searchTextCount = 0;
+            var subtitle = data.subtitle
+              ? data.subtitle.trim()
+              : '';
             var title = data.title
               ? data.title.trim()
               : '';
@@ -1100,7 +1006,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
                 }
               });
               // select top N slices in content
-              var upperBound = parseInt('1');
+              var upperBound = parseInt('-1');
               if (upperBound >= 0) {
                 slicesOfContent = slicesOfContent.slice(0, upperBound);
               }
@@ -1122,17 +1028,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
               // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
               // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
               // "...</p></a>"; }); resultItem += "</li>";
-
-              if (slicesOfTitle.length != 0) {
-                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
-              } else {
-                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
-              }
-              slicesOfContent.forEach(function (slice) {
-                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
-              });
-              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
-
+              resultItem += "<div class='post-preview item'><a target='_blank' href='" + articleUrl + "'><h2 class='post-title'>" + title + "</h2><h3 class='post-subtitle'>" + subtitle + "</h3><time class='search-result-date'>" + dateTime + "</time><hr></a></div>";
               resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
             }
           })
@@ -1152,7 +1048,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
               return resultRight.id - resultLeft.id;
             }
           });
-          var searchResultList = '<div class=\"search-result-list\">';
+          var searchResultList = '<div class=\"search-results mini-post-list\">';
           resultItems.forEach(function (result) {
             searchResultList += result.item;
           })
@@ -1178,7 +1074,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
     $('.popup-trigger').click(function (e) {
       e.stopPropagation();
       if (isfetched === false) {
-        searchFunc('local-search-input', 'local-search-result');
+        searchFunc('search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
@@ -1188,7 +1084,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
       e.stopPropagation();
     });
     $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-page').is(':visible');
       if (shouldDismissSearchPopup) {
         onPopupClose();
       }

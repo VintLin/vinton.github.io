@@ -403,9 +403,9 @@ hr {
 }
 
 #tag_cloud a {
-  background: var(--tag_cloud-background-color) !important;
   background-image: linear-gradient(to bottom, var(--tag_cloud-background-color)0, var(--tag_cloud-background-color2)) !important;
   color: var(--tag_cloud-color);
+  cursor: pointer;
 }
 
 #tag_cloud a:hover {
@@ -414,11 +414,11 @@ hr {
 
 /* ================================================ Tags Menu End ========================================================== */
 /* ================================================ Archive Menu Start ===================================================== */
-.one-tag-list>ul>li {
+.mini-post-list>ul>li {
   color: var(--post-title-subtitle-color);
 }
 
-.one-tag-list>ul>li>a {
+.mini-post-list>ul>li>a {
   color: var(--common-color) !important;
 }
 /* ================================================ Archive Menu End ======================================================= */
@@ -463,10 +463,8 @@ hr {
   --search-background-color: rgba(255, 255, 255, .91);
   --search-base-background-color: #f6f9fc;
   --search-result-background-color-hovor: #e3f2fd;
-  --search-btn-close-color-1080: #151515;
   --search-result-p-color: #5d686f;
   --search-keyword-color: #c00;
-  --search-btn-close-color: #5d738d;
   --post-container-highlight-color: #c5c8c6;
   --post-container-highlight-background: #1d1f21;
   --post-container-highlight-pre-comment: #969896;
@@ -518,10 +516,8 @@ hr {
   --search-background-color: rgba(158, 158, 158, 0.3);
   --search-base-background-color: rgb(34, 38, 49);
   --search-result-background-color-hovor: #323848;
-  --search-btn-close-color-1080: #323848;
   --search-result-p-color: #bfbfbf;
   --search-keyword-color: #e91e63;
-  --search-btn-close-color: rgba(255, 255, 255, 0.8);
   --post-container-highlight-color: #4d4d4c;
   --post-container-highlight-background: #f6f9fc;
   --post-container-highlight-pre-comment: #8e908c;
@@ -880,59 +876,35 @@ textarea.gt-header-textarea::placeholder {
 
 /* ==================================================== highlight End =================================================== */
 /* ==================================================== Search Start =================================================== */
-.local-search-popup {
-  background-color: var(--search-background-color);
-}
-
-.local-search-input-wrapper {
-  background-color: var(--search-base-background-color);
-}
 
 .search-icon .fa-lg {
   color: var(--post-title-subtitle-color);
 }
 
-#local-search-input {
+.search-results a {
   color: var(--post-title-subtitle-color) !important;
   background-color: var(--search-base-background-color);
 }
 
-.search-result-list a {
-  color: var(--post-title-subtitle-color) !important;
-  background-color: var(--search-base-background-color);
-}
-
-.search-result-list a:hover {
+.search-results a:hover {
   background-color: var(--search-result-background-color-hovor);
 }
 
 .popup-btn-close {
-  color: var(--search-btn-close-color);
-  background-color: var(--search-base-background-color);
 }
 
-@media (max-width: 1080px) {
-  span.popup-btn-close:hover {
-    background-color: var(--search-result-background-color-hovor);
-  }
+.popup-btn-close::after {
 }
 
-@media (min-width: 1080px) {
-  .popup-btn-close:hover {
-    background: var(--search-btn-close-color-1080);
-  }
+.popup-btn-close:hover {
 }
 
-.search-result-list p {
+.search-results p {
   color: var(--search-result-p-color);
 }
 
 .search-keyword {
   color: var(--search-keyword-color);
-}
-
-.popup-btn-close::after {
-  color: var(--search-btn-close-color);
 }
 
 /* ==================================================== Search End =================================================== */

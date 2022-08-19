@@ -88,10 +88,6 @@
     
 
     
-      <!-- ThemeColor start -->
-      <link rel="stylesheet" href="/css/scroll.css"/>
-      <!-- ThemeColor end -->
-    
 
     
       <!-- viewer start (Picture preview) -->
@@ -105,10 +101,6 @@
       <!-- Search end -->
     
 
-    
-      <!-- ThemeColor start -->
-      <link rel="stylesheet" href="/css/themecolor.css"/>
-      <!-- ThemeColor end -->
     
 
     
@@ -141,59 +133,10 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--light">
+	<body ontouchstart="" class="body--light">
 
 
 		<!-- ThemeColor -->
-		
-		<!-- ThemeColor -->
-<style type="text/css">
-  .body--light {
-    --light-mode: none;
-    --dark-mode: block;
-  }
-  .body--dark {
-    --light-mode: block;
-    --dark-mode: none;
-  }
-  i.mdui-icon.material-icons.light-mode {
-    display: var(--light-mode);
-  }
-  i.mdui-icon.material-icons.dark-mode {
-    display: var(--dark-mode);
-  }
-</style>
-<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
-  <i class="mdui-icon material-icons light-mode"></i>
-  <i class="mdui-icon material-icons dark-mode"></i>
-</div>
-<script>
-  //getCookieValue
-  function getCookieValue(a) {
-    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
-    return b
-      ? b.pop()
-      : '';
-  }
-  let themeMode = 'light';
-  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
-    let dbody = document.body.classList;
-    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
-  }
-
-  //setCookieValue
-  var toggleBtn = document.querySelector(".toggle");
-  toggleBtn.addEventListener("click", function () {
-    var e = document.body.classList.contains("body--dark");
-    var cookieString = e
-      ? "dark"
-      : "light";
-    var exp = new Date();
-    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
-    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
-  });
-</script>
-
 		
 
 		<!-- Gitter -->
@@ -230,18 +173,7 @@
           <li>
             <a href="/about/">
               
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              分类
+                关于
               
               
             </a>
@@ -252,18 +184,7 @@
           <li>
             <a href="/archive/">
               
-              归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              标签
+                归档
               
               
             </a>
@@ -272,17 +193,14 @@
           
 
           
-          <li>
+          <li class="search-icon">
             <a class="popup-trigger">
-              <span class="search-icon"></span>搜索</a>
+              <i class="fa fa-search"></i>
+            </a>
           </li>
           
 
           <!-- LangSelect -->
-          
-          
-          
-          
           
         </ul>
       </div>
@@ -524,7 +442,6 @@
         
 
         
-        <hr>
 
         <!-- comments start -->
         <!-- 1. gitalk comment -->
@@ -684,9 +601,9 @@
           2022
           <br>
           Theme by
-          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <a target="_blank" rel="noopener" href="https://huangxuan.me/">Hux Blog</a>
           |
-          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=VoterLin&repo=VoterLin.github.io&type=star&count=true"></iframe>
         </p>
       </div>
     </div>
@@ -713,22 +630,11 @@
   
 
   
-    <!-- Scroll start -->
-    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
-    <!-- Scroll end -->
-  
-
-  
-    <!-- LangSelect start -->
-    <script type="text/javascript" src="/js/langselect.js"></script>
-    <!-- LangSelect end -->
-  
 
   
 
   
-    <!-- ribbon -->
-    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+
   
 
   
@@ -782,26 +688,19 @@ https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
 
 
+
 		<!-- Search -->
 		
-		<div class="popup search-popup local-search-popup">
-  <span class="popup-btn-close">
-    ESC
-  </span>
-  <div class="container">
+		<div class="popup search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
     <div class="row">
-      <!-- <div class="col-md-9 col-md-offset-1"> -->
-      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
-
-        <div class="local-search-header clearfix">
-
-          <div class="local-search-input-wrapper">
-            <span class="search-icon">
-              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
-            </span>
-            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
-          </div>
-        </div>
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 local-search-content">
+        <input autocomplete="off" placeholder="搜索..." type="text" id="search-input">
         <div id="local-search-result"></div>
       </div>
     </div>
@@ -826,15 +725,15 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
     // monitor main search box;
     var onPopupClose = function (e) {
       $('.popup').fadeOut(300);
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
+      $('#search-input').val('');
+      $('.search-results').remove();
       $('#no-result').remove();
       $('body').css('overflow', '');
     }
 
     function proceedsearch() {
       $('.popup').fadeIn(300);
-      var $localSearchInput = $('#local-search-input');
+      var $localSearchInput = $('#search-input');
       $localSearchInput.attr("autocapitalize", "none");
       $localSearchInput.attr("autocorrect", "off");
       $localSearchInput.focus();
@@ -886,6 +785,9 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             var isMatch = false;
             var hitCount = 0;
             var searchTextCount = 0;
+            var subtitle = data.subtitle
+              ? data.subtitle.trim()
+              : '';
             var title = data.title
               ? data.title.trim()
               : '';
@@ -1006,7 +908,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
                 }
               });
               // select top N slices in content
-              var upperBound = parseInt('1');
+              var upperBound = parseInt('-1');
               if (upperBound >= 0) {
                 slicesOfContent = slicesOfContent.slice(0, upperBound);
               }
@@ -1028,17 +930,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
               // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
               // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
               // "...</p></a>"; }); resultItem += "</li>";
-
-              if (slicesOfTitle.length != 0) {
-                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
-              } else {
-                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
-              }
-              slicesOfContent.forEach(function (slice) {
-                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
-              });
-              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
-
+              resultItem += "<div class='post-preview item'><a target='_blank' href='" + articleUrl + "'><h2 class='post-title'>" + title + "</h2><h3 class='post-subtitle'>" + subtitle + "</h3><time class='search-result-date'>" + dateTime + "</time><hr></a></div>";
               resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
             }
           })
@@ -1058,7 +950,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
               return resultRight.id - resultLeft.id;
             }
           });
-          var searchResultList = '<div class=\"search-result-list\">';
+          var searchResultList = '<div class=\"search-results mini-post-list\">';
           resultItems.forEach(function (result) {
             searchResultList += result.item;
           })
@@ -1084,7 +976,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
     $('.popup-trigger').click(function (e) {
       e.stopPropagation();
       if (isfetched === false) {
-        searchFunc('local-search-input', 'local-search-result');
+        searchFunc('search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
@@ -1094,7 +986,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
       e.stopPropagation();
     });
     $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-page').is(':visible');
       if (shouldDismissSearchPopup) {
         onPopupClose();
       }
