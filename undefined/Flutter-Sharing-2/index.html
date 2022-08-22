@@ -119,10 +119,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://voterlin.github.io/cn/Flutter-Sharing-1/">
+  <link rel="canonical" href="https://voterlin.github.io/undefined/Flutter-Sharing-2/">
   <title>
     
-      「Flutter」跨平台技术演进 - Voter&#39;s Blog
+      「Flutter」初识Flutter - Voter&#39;s Blog
     
   </title>
 <meta name="generator" content="Hexo 6.2.0"></head>
@@ -161,7 +161,7 @@
       <div class="navbar-collapse ">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/">首页</a>
+            <a href="/">HOME</a>
           </li>
 
           
@@ -171,7 +171,7 @@
           <li>
             <a href="/about/">
               
-              关于
+              ABOUT
               
               
             </a>
@@ -182,7 +182,7 @@
           <li>
             <a href="/archive/">
               
-                归档
+                ARCHIVES
               
               
             </a>
@@ -246,34 +246,6 @@
 		<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 
-  <style type="text/css">
-    .body--light {
-      /* intro-header */
-      --intro-header-background-image-url-home: url('/img/header_img/bg_home.jpg');
-      --intro-header-background-image-url-post: url('/img/header_img/bg_1.jpg');
-      --intro-header-background-image-url-page: url('//img/header_img/bg_1.jpg');
-    }
-    .body--dark {
-      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg_home.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bg_1.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/bg_1.jpg');
-    }
-     /*post*/
-      header.intro-header {
-        background-image: var(--intro-header-background-image-url-post);
-      }
-      
-        #signature {/*signature*/
-          background-image: url('/img/signature/voter-white.png');
-        }
-      
-    
-  </style>
-
-
-
-
-
 <header class="intro-header">
   <!-- Signature -->
   <div class="header-bar"></div>
@@ -290,35 +262,12 @@
               <a class="tag" href="/tags/#技术分享" title="技术分享">技术分享</a>
               
             </div>
-            <h1>「Flutter」跨平台技术演进</h1>
+            <h1>「Flutter」初识Flutter</h1>
             <h2 class="subheading">Flutter技术分享</h2>
             <span class="meta">
               Posted by Voter on
-              2020-02-07
+              2020-02-08
             </span>
-
-            
-            <!-- WordCount start -->
-            <div class="blank_box"></div>
-            <span class="meta">
-              Estimated Reading Time <span class="post-count">2</span> Minutes
-            </span>
-            <div class="blank_box"></div>
-            <span class="meta">
-              Words <span class="post-count">729</span> In Total
-            </span>
-            <div class="blank_box"></div>
-            <!-- WordCount end -->
-            
-            
-            <!-- 不蒜子统计 start -->
-            <span class="meta" id="busuanzi_container_page_pv">
-              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
-            </span>
-            <!-- 不蒜子统计 end -->
-            
-
-
           </div>
           
         </div>
@@ -351,33 +300,108 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="前言">前言</h2>
-<p><img src="1_time_spent.jpg" alt="使用时长"><br>
-这是来自eMarketer的两份市场调研数据，左边是中国人均多媒体设备使用时长，右边是中国人均移动智能设备使用时长，可以看到2019年到2020年移动设备使用时长上涨了17%，之后两年预计还会再以10+%上的速度继续上涨。</p>
-<p>反观总的多媒体设备使用时长上涨的并没有那么多，说明移动设备在逐渐替代以PC和平板为主的其他多媒体设备，那对于移动设备使用时长其实大部分还是集中在移动应用而不是移动端网页上。也就是说未来几年移动应用市场还是在向好的方向发展。</p>
-<p>但是，这些增长迅猛的使用时长，并不会平均分配给手机上的每个应用，实际上，会被用户所发现并且持续使用的应用大概只会在20个左右，在将来新应用出现在用户的手机主页面上将会越来越难。<br>
-<img src="2_high_quality.png" alt="高品质"><br>
-那在这个背景下用户向往的是高质量的应用，高质量指的是有实用的功能，有设计感的界面和流畅的交互。</p>
-<p>而对于移动应用开发商来说，接下来面对的是新品应该如何抢占市场，而在之前已经站稳脚跟的产品又应该如何提升品质，建立起护城河的问题。</p>
-<p>那对于这些问题对策自然就是，在保证产品质量的前提下 1.提升开发效率 2.缩减开发成本 做到快速落地应用的同时，提高应用的更新速度，根据市场反馈实时调整方向。</p>
-<h3 id="跨平台框架">跨平台框架</h3>
-<p>对于前面的说的这些问题，做为解决方法之一的跨平台技术自然就因运而生了，那根据实现原理可以分为三类：<br>
-<img src="3_classify.png" alt="分类"></p>
-<h4 id="H5-原生平台">H5 + 原生平台</h4>
-<p>代表的技术有:<br>
-Cordova， Cordova的前身是2011年7月发布的PhoneGap，又在同年10月被Adobe收购，最后贡献给Apache成为开源项目后改成现在的名字。<br>
-Ionic，2013年发布至今已经发布到第四个大版本，现在最新的版本是ionic4。<br>
-微信小程序，2015年初发布了它的前身，​JS-SDK，它是WeixinJSBridge 包装整合而出的一整套网页开发工具包，方便开发者使用微信的原生能力。<br>
-<img src="4_H5.png" alt="H5+原生平台"></p>
-<h4 id="JavaScript开发-原生渲染">JavaScript开发 + 原生渲染</h4>
-<p>代表的技术有:<br>
-React Native，是Facebook在2015年发布。<br>
-Weex，阿里2016年4月开放内测邀请，在同年6月开源。<br>
-快应用，2018年3月份，由小米，OPPO，VIVO，华为等10家国内主流厂商成立的快应用联盟发布。<br>
-<img src="5_JavaScript.png" alt="JavaScript开发+原生渲染"></p>
-<h4 id="自绘UI引擎-原生平台">自绘UI引擎 + 原生平台</h4>
-<p>最后是以Flutter为代表的的跨平台技术实现方案。<br>
-<img src="6_Draw.png" alt="自绘UI引擎+原生平台"></p>
+        <h1>Flutter</h1>
+<blockquote>
+<p>接下来讲Flutter</p>
+</blockquote>
+<h2 id="简介">简介</h2>
+<p>Flutter是Google发布的一个用于创建跨平台 高性能移动应用框架，Flutter UI界面的渲染时基于Skia 2d渲染引擎，2015年在Dart开发者峰会上发布的Sky是Flutter的前身，可以在手机上运行高达120帧刷新频率的应用。之后是在2018年2月发布首个beta版本，在同年12月发布了1.0版本，可以正式投入生产环境。截至目前最新的稳定版本是1.22.6。</p>
+<blockquote>
+<p>Flutter发展时间点</p>
+</blockquote>
+<p><img src="1_time_line.png" alt="时间线"></p>
+<blockquote>
+<p>市面上使用到Flutter的应用</p>
+</blockquote>
+<p><img src="2_flutter_app.png" alt="应用"></p>
+<h2 id="Flutter架构">Flutter架构</h2>
+<p>这个是Flutter的框架结构</p>
+<p><img src="3_framework.png" alt="架构"></p>
+<p><code>Flutter</code>主要由两块构成<code>Framework</code>和<code>Engine</code></p>
+<p><code>Framework</code>是由纯<code>Dart</code>实现的SDK，它里面包含一套基础库，其中<code>Animation</code> <code>Painting</code> <code>Gestures</code> <code>Foundation</code> 是由<code>Framework</code>下方的<code>Engine</code>层暴露出来的底层UI库，提供了动画，手势操作以及自定义绘制能力。<br>
+<code>Rendering</code>层，是抽象的布局层，在这一层中会构建一个UI树，当UI树发生变化时，会计算变化部分，然后更新UI树，最终将UI树绘制到屏幕上，这个过程类似React中的虚拟DOM。<br>
+最上面的两层 <code>Widgets</code>是Flutter提供的一套基础组件库，在它之上，是Flutter提供的两种视觉风格库，来自iOS的<code>Cupertino</code>和来自Android的<code>Material</code>。</p>
+<p><code>Engine</code> 这是一个纯 <code>C++</code>实现的 SDK，其中包括了 <code>Skia</code>引擎、Dart运行时、文字排版引擎等。在这里执行真正的绘制逻辑。</p>
+<h2 id="Flutter如何描述UI">Flutter如何描述UI</h2>
+<p><img src="4_UI.png" alt="描述"><br>
+我们知道在前端是以<code>HTML</code> + <code>CSS</code> + <code>JavaScript</code>的方式来组织项目，其中<code>HTML</code>负责描述UI界面各个元素的布局，<code>CSS</code>描述元素的样式，<code>JavaScript</code>组织各个元素中的具体逻辑。同样的在<code>Android</code>中，<code>XML</code>文件负责了页面的布局和样式，再由<code>Java</code>或<code>Kotlin</code>代码组织控件间的具体逻辑。</p>
+<p>而在Flutter中布局样式和逻辑都是在<code>Dart</code>代码中完成的。可以看到右边的Dart代码里初始化了一个Widget类，Flutter中Widget的功能就包含了布局样式和逻辑。这段代码里用到了两个Flutter提供的基础Widget，Container和Text，Text是用来展示文本的Widget，可以看到里面有两个参数，字符串和style，第一个传入的参数就是需要展示的文本，第二个style参数是设置文本的样式。</p>
+<p>外层的Container是组合型的Widget，Flutter在Container里整合了多个基础的Widget，因此Container提供了经常会用到的参数来设置样式，在这段代码里往Container传入了4个参数，child， width， height， color描述了容器的宽高和颜色，其中child是传入一个Widget，描述容器内需要包含的UI。</p>
+<h2 id="Flutter常用Widget">Flutter常用Widget</h2>
+<p>Flutter 提供的Widget不同于HTML提供的标签或Android提供的View，并不是每个Widget都有width height padding margin可以设置，反而是把各种GUI框架会提供的参数再拆分为更基础的Widget，每个Widget只承载了一点功能。开发者可以通过这些Widget自由组合自己想要的控件。接下来会简单列举几个Widget。</p>
+<h3 id="容器Widget">容器Widget</h3>
+<h4 id="SizedBox">SizedBox</h4>
+<blockquote>
+<p>SizedBox，用于限制内部Widget的长宽</p>
+</blockquote>
+<p><img src="5_SizeBox.png" alt="SizedBox"></p>
+<h4 id="Padding">Padding</h4>
+<blockquote>
+<p>Padding 描述父Widget和子Widget的边距</p>
+</blockquote>
+<p><img src="6_Padding.png" alt="Padding"></p>
+<h4 id="Align">Align</h4>
+<blockquote>
+<p>Align, 描述子Widget在父Widget的对齐位置<br>
+可以设置八个方位上、下、左、右、左上、右上、左下、右下</p>
+</blockquote>
+<p><img src="7_Align.png" alt="Align"></p>
+<h4 id="DecoratedBox">DecoratedBox</h4>
+<blockquote>
+<p>DecoratedBox，提供了颜色，边框圆角，边框，阴影等样式的设置</p>
+</blockquote>
+<p><img src="8_DecorateBox.png" alt="DecoratedBox"></p>
+<p>上述介绍的Widget可能没法满足日常开发的需求，如果想要上述几个Widget参数的集合可以使用Container</p>
+<h4 id="Container">Container</h4>
+<blockquote>
+<p>提供了我前面介绍那些Widget的全部参数，还有一些其他的参数，大家感兴趣可以自己去探索<br>
+实际上Container是将前面说到的Widget组合包装起来</p>
+</blockquote>
+<p><img src="9_Container.png" alt="Container"></p>
+<h3 id="布局Widget">布局Widget</h3>
+<p>前面简单说了下，我们怎么通过Widget来描述一个容器的样式，通常在编写UI界面代码时，还需要能够为多个组件编排位置，为组件布局的能力，接下来会介绍几个布局组件。</p>
+<h4 id="Column">Column</h4>
+<blockquote>
+<p>列布局Column，可以将多个WIdget排布按列显示</p>
+</blockquote>
+<p><img src="10_Column.png" alt="Column"></p>
+<h4 id="Row">Row</h4>
+<blockquote>
+<p>行布局Row，可以将多个Widget排列按行显示</p>
+</blockquote>
+<p><img src="11_Row.png" alt="Row"></p>
+<h4 id="Stack">Stack</h4>
+<blockquote>
+<p>层叠布局Stack，可以将多个Widget堆叠在一起</p>
+</blockquote>
+<p><img src="12_Stack.png" alt="Stack"></p>
+<h4 id="ListView">ListView</h4>
+<blockquote>
+<p>当需要按行或列排布数量不固定且可能会超出屏幕边界时，可以使用ListView<br>
+这里的scrollDirection可以设置垂直还是水平滑动</p>
+</blockquote>
+<p><img src="13_ListView.png" alt="ListView"></p>
+<h3 id="自定义Widget">自定义Widget</h3>
+<p>前面介绍完，如何设置样式以及如何布局，接下来接下来了解下，如何自己写个Widget。</p>
+<p>要自己写Widget有两种选择，你可以继承StatefulWidget或StatelessWidget其中一个类来编写自己的Widget，这两个类具体差别是，当你只需要组合其他Widget展示一个固定的样式时用StatelessWidget。当需要在Widget中根据用户操作，应用或自身的生命周期做不同的UI展示时或者需要在其内保存会变动的状态时，就需要StatefulWdiget。</p>
+<p>简单来说StatelessWidget无生命周期，无状态，只是用于展示，StatefulWidget有生命周期，有状态。<br>
+<img src="14_Widget.png" alt="Widget"></p>
+<h2 id="例子：创建一个Flutter项目并编写一个页面">例子：创建一个Flutter项目并编写一个页面</h2>
+<blockquote>
+<p>写个例子看看，具体内容，这个例子，如动图展示的，会依次经历以下流程：<br>
+输入名字 -&gt; 点击 getContent 按钮 -&gt; 显示加载弹窗 -&gt; 请求数据  -&gt; 关闭加载弹窗  -&gt; 展示获取到的数据。</p>
+</blockquote>
+<p><strong><a href="">演示项目</a></strong></p>
+<p><img src="15_Example.png" alt="Example"></p>
+<h3 id="Flutter项目目录">Flutter项目目录</h3>
+<p><img src="16_Folder.png" alt="Folder"></p>
+<h2 id="Flutter编译模式">Flutter编译模式</h2>
+<p>Flutter有三种方式构建项目，分别是用于发布正式包的<code>Release</code>用于测试性能的<code>Profile</code>和用于日常项目开发的<code>Debug</code>模式，三种构建方式具体的不同在于Dart代码编译模式的不同，在项目开发阶段代码编译模式是<code>JIT</code>，全称 Just In Time，是指在程序运行过程中实时编译执行具体的代码，这让我们在Flutter中获得了Hot Reload，Hot Restart等提高开发效率的功能。</p>
+<p>在项目需要发布时是<code>AOT</code>，全称是 Ahead Of Time，在这种编译模式下程序运行前代码就已经编译为机器码了，而不需要在运行中解释执行，以此来保证应用的性能。</p>
+<p><img src="17_Dart.png" alt="Dart"></p>
+<h2 id="Flutter-Hot-Reload">Flutter Hot Reload</h2>
+<p>触发热重载会扫描项目中文件，将有改动的dart文件转化为标记化源代码kernel files，通过HTTP接口发送到正在设备上运行的DartVM中，DartVM替换本地资源，然后通知Flutter Framework重建、重新布局、重新绘制WidgetsTree，即可看到改动效果。<br>
+<img src="18_Hot_Relod.png" alt="Reload"></p>
 
 
         <hr>
@@ -385,9 +409,13 @@ Weex，阿里2016年4月开放内测邀请，在同年6月开源。<br>
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/Flutter-Sharing-2/" data-toggle="tooltip" data-placement="top" title="「Flutter」初识Flutter">&larr; Previous Post</a>
+            <a href="/undefined/Flutter-Sharing-3/" data-toggle="tooltip" data-placement="top" title="「Flutter」状态管理">&larr; Previous Post</a>
           </li>
           
+          
+          <li class="next">
+            <a href="/undefined/Flutter-Sharing-1/" data-toggle="tooltip" data-placement="top" title="「Flutter」跨平台技术演进">Next Post &rarr;</a>
+          </li>
           
         </ul>
 
@@ -398,7 +426,7 @@ Weex，阿里2016年4月开放内测邀请，在同年6月开源。<br>
 <div class="tip">
   <p>
     
-      如果您喜欢此博客或觉得它对您有用，则欢迎对此发表评论。 也欢迎您分享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与我联系以将其删除。 谢谢 ！
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
     
   </p>
 </div>
@@ -430,9 +458,9 @@ Weex，阿里2016年4月开放内测邀请，在同年6月开源。<br>
     
       <aside id="sidebar">
         <div id="toc" class="toc-article">
-        <strong class="toc-title">目录</strong>
+        <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-nav-text">前言</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%A1%86%E6%9E%B6"><span class="toc-nav-text">跨平台框架</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#H5-%E5%8E%9F%E7%94%9F%E5%B9%B3%E5%8F%B0"><span class="toc-nav-text">H5 + 原生平台</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JavaScript%E5%BC%80%E5%8F%91-%E5%8E%9F%E7%94%9F%E6%B8%B2%E6%9F%93"><span class="toc-nav-text">JavaScript开发 + 原生渲染</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E8%87%AA%E7%BB%98UI%E5%BC%95%E6%93%8E-%E5%8E%9F%E7%94%9F%E5%B9%B3%E5%8F%B0"><span class="toc-nav-text">自绘UI引擎 + 原生平台</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-text">Flutter</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter%E6%9E%B6%E6%9E%84"><span class="toc-nav-text">Flutter架构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0UI"><span class="toc-nav-text">Flutter如何描述UI</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter%E5%B8%B8%E7%94%A8Widget"><span class="toc-nav-text">Flutter常用Widget</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%B9%E5%99%A8Widget"><span class="toc-nav-text">容器Widget</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#SizedBox"><span class="toc-nav-text">SizedBox</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Padding"><span class="toc-nav-text">Padding</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Align"><span class="toc-nav-text">Align</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#DecoratedBox"><span class="toc-nav-text">DecoratedBox</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Container"><span class="toc-nav-text">Container</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%83%E5%B1%80Widget"><span class="toc-nav-text">布局Widget</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Column"><span class="toc-nav-text">Column</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Row"><span class="toc-nav-text">Row</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Stack"><span class="toc-nav-text">Stack</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ListView"><span class="toc-nav-text">ListView</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89Widget"><span class="toc-nav-text">自定义Widget</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAFlutter%E9%A1%B9%E7%9B%AE%E5%B9%B6%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2"><span class="toc-nav-text">例子：创建一个Flutter项目并编写一个页面</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Flutter%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95"><span class="toc-nav-text">Flutter项目目录</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter%E7%BC%96%E8%AF%91%E6%A8%A1%E5%BC%8F"><span class="toc-nav-text">Flutter编译模式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter-Hot-Reload"><span class="toc-nav-text">Flutter Hot Reload</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -451,7 +479,7 @@ Weex，阿里2016年4月开放内测邀请，在同年6月开源。<br>
         <section>
           <!-- no hr -->
           <h5>
-            <a href="/tags/">特色标签</a>
+            <a href="/tags/">FEATURED TAGS</a>
           </h5>
           <div class="tags">
             
@@ -591,9 +619,6 @@ Weex，阿里2016年4月开放内测邀请，在同年6月开源。<br>
   <script async="true" type="text/javascript" src="/js/totop.js"></script>
 
   
-    <!-- Busuanzi JavaScript -->
-    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
 
   
 
@@ -666,7 +691,7 @@ start: '#bbbbee', end: '#bd6c25' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
   <div class="search-main container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 local-search-content">
-        <input autocomplete="off" placeholder="搜索..." type="text" id="search-input">
+        <input autocomplete="off" placeholder="SEARCH..." type="text" id="search-input">
         <div id="local-search-result"></div>
       </div>
     </div>

@@ -423,8 +423,8 @@ pre code {
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 45px 0 55px;
-  color: white;
+  padding: 45px 0 20px;
+  color: #404040;
 }
 
 .intro-header .site-heading {
