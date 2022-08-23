@@ -33,11 +33,11 @@ i.mdui-icon.material-icons.bright-mode {
 
 /* archives */
 li.archive-list-item:hover {
-  color: #bd6c25;
+  color: #4969ed;
 }
 
 li.archive-list-item:hover a {
-  color: #bd6c25 !important;
+  color: #4969ed !important;
 }
 
 /* social share */
@@ -73,7 +73,7 @@ li.archive-list-item:hover a {
 }
 
 .social-share-ul>.social-share-li>a:hover {
-  background-color: #bd6c25;
+  background-color: #4969ed;
 }
 
 .social-share .list-inline>li :hover {

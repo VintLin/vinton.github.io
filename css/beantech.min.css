@@ -27,14 +27,14 @@
 }
 .sidebar-container a:hover,
 .sidebar-container a:active {
-  color: #bd6c25 !important;
+  color: #4969ed !important;
 }
 .sidebar-container .tags a {
   border-color: #bfbfbf;
 }
 .sidebar-container .tags a:hover,
 .sidebar-container .tags a:active {
-  border-color: #bd6c25;
+  border-color: #4969ed;
 }
 .sidebar-container .short-about img {
   width: 80%;
@@ -85,7 +85,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #bd6c25;
+  color: #4969ed;
 }
 a img:hover,
 a img:focus {
@@ -160,7 +160,7 @@ pre code {
 }
 .post-container a:hover,
 .post-container a:focus {
-  color: #bd6c25;
+  color: #4969ed;
 }
 .post-container h1,
 .post-container h2,
@@ -226,14 +226,14 @@ pre code {
 }
 .post-container .tags a:hover,
 .post-container .tags a:active {
-  border-color: #bd6c25;
+  border-color: #4969ed;
 }
 #tag_cloud a.tag-button--all,
 #tag_cloud a.tag-button--all:hover,
 #tag_cloud a.tag-button--all:active,
 #tag_cloud a.tag-button--all.focus {
   font-weight: 700;
-  color: #bd6c25 !important;
+  color: #4969ed !important;
   background-color: #e4e4e4 !important;
 }
 #tag_cloud a.focus, #tag_cloud .tag.focus {
@@ -320,7 +320,7 @@ pre code {
   line-height: 25px;
 }
 .navbar-custom .navbar-brand:hover {
-  color: #bd6c25;
+  color: #4969ed;
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
@@ -347,7 +347,7 @@ pre code {
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: #bd6c25;
+    color: #4969ed;
   }
   .navbar-custom .nav li a {
     color: #404040;
@@ -355,7 +355,7 @@ pre code {
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: #bd6c25;
+    color: #4969ed;
   }
   .navbar-custom .nav li a:active {
     background: none;
@@ -388,14 +388,14 @@ pre code {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #bd6c25;
+    color: #4969ed;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #bd6c25;
+    color: #4969ed;
   }
   .navbar-custom.is-visible {
     -webkit-transform: translate3d(0, 100%, 0);
@@ -524,7 +524,7 @@ pre code {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #bd6c25;
+  color: #4969ed;
 }
 .post-preview > a > .post-title {
   font-size: 21px;
@@ -552,7 +552,7 @@ pre code {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #bd6c25;
+  color: #4969ed;
   text-decoration: underline;
 }
 @media only screen and (min-width: 840px) {
@@ -574,7 +574,7 @@ pre code {
   color: #a3a3a3;
 }
 .post-content-preview:hover {
-  color: #bd6c25;
+  color: #4969ed;
 }
 @media only screen and (min-width: 840px) {
   .post-content-preview {
@@ -614,7 +614,7 @@ footer .copyright a {
 }
 footer .copyright a:hover,
 footer .copyright a:focus {
-  color: #bd6c25;
+  color: #4969ed;
 }
 .floating-label-form-group {
   font-size: 14px;
@@ -661,7 +661,7 @@ footer .copyright a:focus {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #bd6c25;
+  color: #4969ed;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eee;
@@ -686,8 +686,8 @@ form .row:first-child .floating-label-form-group {
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #bd6c25;
-  border: 1px solid #bd6c25;
+  background-color: #4969ed;
+  border: 1px solid #4969ed;
   color: white;
 }
 .pager {
@@ -723,8 +723,8 @@ form .row:first-child .floating-label-form-group {
 .pager li > a:hover,
 .pager li > a:focus {
   color: white;
-  background-color: #bd6c25;
-  border: 1px solid #bd6c25;
+  background-color: #4969ed;
+  border: 1px solid #4969ed;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
@@ -737,12 +737,12 @@ form .row:first-child .floating-label-form-group {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #bd6c25;
+  background: #4969ed;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #bd6c25;
+  background: #4969ed;
 }
 img::selection {
   color: white;
@@ -805,13 +805,13 @@ img::-moz-selection {
   line-height: 28px;
   margin: 0 2px;
   margin-bottom: 8px;
-  background: #bd6c25;
+  background: #4969ed;
 }
 #tag_cloud a:hover,
 #tag_cloud .tag:hover,
 #tag_cloud a:active,
 #tag_cloud .tag:active {
-  background-color: #bd6c25 !important;
+  background-color: #4969ed !important;
 }
 @media only screen and (min-width: 840px) {
   #tag_cloud {
@@ -830,7 +830,7 @@ img::-moz-selection {
   margin-top: 0;
 }
 .listing-seperator {
-  color: #bd6c25;
+  color: #4969ed;
   font-size: 21px !important;
 }
 .listing-seperator::before {

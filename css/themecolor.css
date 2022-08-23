@@ -13,31 +13,31 @@
   --navbar-color: rgba(255, 255, 255, .9);
   --border-bottom-color: rgba(255, 255, 255, .9);
   --navbar-brand-color_1170: #404040;
-  --navbar-brand-color-hover_1170: #bd6c25;
+  --navbar-brand-color-hover_1170: #4969ed;
   --navbar-brand-color_768: white;
   --navbar-brand-color-hover_768: rgba(255, 255, 255, 0.8);
   /* post-title、post-subtitle、post-content */
-  --post-content-color-hover: #bd6c25;
+  --post-content-color-hover: #4969ed;
   /* tags */
   --tags-color: gray;
   --tags-border-color: gray;
-  --tags-color-hovor: #bd6c25;
-  --tags-border-color-hovor: #bd6c25;
+  --tags-color-hovor: #4969ed;
+  --tags-border-color-hovor: #4969ed;
   --tags-a-background-color: rgba(255, 255, 255, .4);
   --sidebar-tags-color: #bfbfbf;
   --sidebar-tags-border-color: #bfbfbf;
-  --sidebar-tags-color-hovor: #bd6c25;
+  --sidebar-tags-color-hovor: #4969ed;
   /* pager */
   --pager-color: #404040;
   --pager-color-hover: white;
-  --pager-background-color-hover: #bd6c25;
+  --pager-background-color-hover: #4969ed;
   /* fa */
   --fa-color: white;
   /* visitor */
-  --visitor-color: #bd6c25;
+  --visitor-color: #4969ed;
   /* copyright */
   --copyright-color: #337ab7;
-  --copyright-color-hovor: #bd6c25;
+  --copyright-color-hovor: #4969ed;
   --copyright-text-muted-color: #777;
   /* top */
   --top-color: #f46267;
@@ -55,7 +55,7 @@
   /* viewer */
   --viewer-background-color: rgba(0, 0, 0, .5);
   /* toggle-button */
-  --toggle-border-color: #bd6c25;
+  --toggle-border-color: #4969ed;
   --toggle-color: #1f1f1f;
   --toggle-hover: rgba(0, 0, 0, .1);
   --webkit-scrollbar-track-color: rgb(34, 38, 49);
