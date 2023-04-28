@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-58KEEQ4B5L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', config.ga_track_id);
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c7be85317623071fc4ef1edd7169c279";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="change..."/>
+  <meta name="keyword" content="Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/icon_v_web.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+
+    
+
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://vintlin.github.io/undefined/Flutter-Sharing-2/">
+  <title>
+    
+      「Flutter」初识Flutter - Vint&#39;s Blog
+    
+  </title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light">
+
+
+		<!-- ThemeColor -->
+		
+
+		<!-- Gitter -->
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container">
+    <div class="col-lg-11 col-lg-offset-1 col-md-11 col-md-offset-1 col-sm-14 col-xs-14">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse ">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+                ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li class="search-icon">
+            <a class="popup-trigger">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </div>
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div class="header-bar"></div>
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/archive/?tag=Flutter" title="Flutter">Flutter</a>
+              
+              <a class="tag" href="/archive/?tag=技术分享" title="技术分享">技术分享</a>
+              
+            </div>
+            <h1>「Flutter」初识Flutter</h1>
+            <h2 class="subheading">Flutter技术分享</h2>
+            <span class="meta">
+              Posted by Vint on
+              2020-02-08
+            </span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>Flutter</h1>
+<blockquote>
+<p>接下来讲Flutter</p>
+</blockquote>
+<h2 id="简介-2">简介</h2>
+<p>Flutter是Google发布的一个用于创建跨平台 高性能移动应用框架，Flutter UI界面的渲染时基于Skia 2d渲染引擎，2015年在Dart开发者峰会上发布的Sky是Flutter的前身，可以在手机上运行高达120帧刷新频率的应用。之后是在2018年2月发布首个beta版本，在同年12月发布了1.0版本，可以正式投入生产环境。截至目前最新的稳定版本是1.22.6。</p>
+<blockquote>
+<p>Flutter发展时间点</p>
+</blockquote>
+<p><img src="1_time_line.png" alt="时间线"></p>
+<blockquote>
+<p>市面上使用到Flutter的应用</p>
+</blockquote>
+<p><img src="2_flutter_app.png" alt="应用"></p>
+<h2 id="Flutter架构">Flutter架构</h2>
+<p>这个是Flutter的框架结构</p>
+<p><img src="3_framework.png" alt="架构"></p>
+<p><code>Flutter</code>主要由两块构成<code>Framework</code>和<code>Engine</code></p>
+<p><code>Framework</code>是由纯<code>Dart</code>实现的SDK，它里面包含一套基础库，其中<code>Animation</code> <code>Painting</code> <code>Gestures</code> <code>Foundation</code> 是由<code>Framework</code>下方的<code>Engine</code>层暴露出来的底层UI库，提供了动画，手势操作以及自定义绘制能力。<br>
+<code>Rendering</code>层，是抽象的布局层，在这一层中会构建一个UI树，当UI树发生变化时，会计算变化部分，然后更新UI树，最终将UI树绘制到屏幕上，这个过程类似React中的虚拟DOM。<br>
+最上面的两层 <code>Widgets</code>是Flutter提供的一套基础组件库，在它之上，是Flutter提供的两种视觉风格库，来自iOS的<code>Cupertino</code>和来自Android的<code>Material</code>。</p>
+<p><code>Engine</code> 这是一个纯 <code>C++</code>实现的 SDK，其中包括了 <code>Skia</code>引擎、Dart运行时、文字排版引擎等。在这里执行真正的绘制逻辑。</p>
+<h2 id="Flutter如何描述UI">Flutter如何描述UI</h2>
+<p><img src="4_UI.png" alt="描述"><br>
+我们知道在前端是以<code>HTML</code> + <code>CSS</code> + <code>JavaScript</code>的方式来组织项目，其中<code>HTML</code>负责描述UI界面各个元素的布局，<code>CSS</code>描述元素的样式，<code>JavaScript</code>组织各个元素中的具体逻辑。同样的在<code>Android</code>中，<code>XML</code>文件负责了页面的布局和样式，再由<code>Java</code>或<code>Kotlin</code>代码组织控件间的具体逻辑。</p>
+<p>而在Flutter中布局样式和逻辑都是在<code>Dart</code>代码中完成的。可以看到右边的Dart代码里初始化了一个Widget类，Flutter中Widget的功能就包含了布局样式和逻辑。这段代码里用到了两个Flutter提供的基础Widget，Container和Text，Text是用来展示文本的Widget，可以看到里面有两个参数，字符串和style，第一个传入的参数就是需要展示的文本，第二个style参数是设置文本的样式。</p>
+<p>外层的Container是组合型的Widget，Flutter在Container里整合了多个基础的Widget，因此Container提供了经常会用到的参数来设置样式，在这段代码里往Container传入了4个参数，child， width， height， color描述了容器的宽高和颜色，其中child是传入一个Widget，描述容器内需要包含的UI。</p>
+<h2 id="Flutter常用Widget">Flutter常用Widget</h2>
+<p>Flutter 提供的Widget不同于HTML提供的标签或Android提供的View，并不是每个Widget都有width height padding margin可以设置，反而是把各种GUI框架会提供的参数再拆分为更基础的Widget，每个Widget只承载了一点功能。开发者可以通过这些Widget自由组合自己想要的控件。接下来会简单列举几个Widget。</p>
+<h3 id="容器Widget">容器Widget</h3>
+<h4 id="SizedBox">SizedBox</h4>
+<blockquote>
+<p>SizedBox，用于限制内部Widget的长宽</p>
+</blockquote>
+<p><img src="5_SizeBox.png" alt="SizedBox"></p>
+<h4 id="Padding">Padding</h4>
+<blockquote>
+<p>Padding 描述父Widget和子Widget的边距</p>
+</blockquote>
+<p><img src="6_Padding.png" alt="Padding"></p>
+<h4 id="Align">Align</h4>
+<blockquote>
+<p>Align, 描述子Widget在父Widget的对齐位置<br>
+可以设置八个方位上、下、左、右、左上、右上、左下、右下</p>
+</blockquote>
+<p><img src="7_Align.png" alt="Align"></p>
+<h4 id="DecoratedBox">DecoratedBox</h4>
+<blockquote>
+<p>DecoratedBox，提供了颜色，边框圆角，边框，阴影等样式的设置</p>
+</blockquote>
+<p><img src="8_DecorateBox.png" alt="DecoratedBox"></p>
+<p>上述介绍的Widget可能没法满足日常开发的需求，如果想要上述几个Widget参数的集合可以使用Container</p>
+<h4 id="Container">Container</h4>
+<blockquote>
+<p>提供了我前面介绍那些Widget的全部参数，还有一些其他的参数，大家感兴趣可以自己去探索<br>
+实际上Container是将前面说到的Widget组合包装起来</p>
+</blockquote>
+<p><img src="9_Container.png" alt="Container"></p>
+<h3 id="布局Widget">布局Widget</h3>
+<p>前面简单说了下，我们怎么通过Widget来描述一个容器的样式，通常在编写UI界面代码时，还需要能够为多个组件编排位置，为组件布局的能力，接下来会介绍几个布局组件。</p>
+<h4 id="Column">Column</h4>
+<blockquote>
+<p>列布局Column，可以将多个WIdget排布按列显示</p>
+</blockquote>
+<p><img src="10_Column.png" alt="Column"></p>
+<h4 id="Row">Row</h4>
+<blockquote>
+<p>行布局Row，可以将多个Widget排列按行显示</p>
+</blockquote>
+<p><img src="11_Row.png" alt="Row"></p>
+<h4 id="Stack">Stack</h4>
+<blockquote>
+<p>层叠布局Stack，可以将多个Widget堆叠在一起</p>
+</blockquote>
+<p><img src="12_Stack.png" alt="Stack"></p>
+<h4 id="ListView">ListView</h4>
+<blockquote>
+<p>当需要按行或列排布数量不固定且可能会超出屏幕边界时，可以使用ListView<br>
+这里的scrollDirection可以设置垂直还是水平滑动</p>
+</blockquote>
+<p><img src="13_ListView.png" alt="ListView"></p>
+<h3 id="自定义Widget">自定义Widget</h3>
+<p>前面介绍完，如何设置样式以及如何布局，接下来接下来了解下，如何自己写个Widget。</p>
+<p>要自己写Widget有两种选择，你可以继承StatefulWidget或StatelessWidget其中一个类来编写自己的Widget，这两个类具体差别是，当你只需要组合其他Widget展示一个固定的样式时用StatelessWidget。当需要在Widget中根据用户操作，应用或自身的生命周期做不同的UI展示时或者需要在其内保存会变动的状态时，就需要StatefulWdiget。</p>
+<p>简单来说StatelessWidget无生命周期，无状态，只是用于展示，StatefulWidget有生命周期，有状态。<br>
+<img src="14_Widget.png" alt="Widget"></p>
+<h2 id="例子：创建一个Flutter项目并编写一个页面">例子：创建一个Flutter项目并编写一个页面</h2>
+<blockquote>
+<p>写个例子看看，具体内容，这个例子，如动图展示的，会依次经历以下流程：<br>
+输入名字 -&gt; 点击 getContent 按钮 -&gt; 显示加载弹窗 -&gt; 请求数据  -&gt; 关闭加载弹窗  -&gt; 展示获取到的数据。</p>
+</blockquote>
+<p><strong><a href="">演示项目</a></strong></p>
+<p><img src="15_Example.png" alt="Example"></p>
+<h3 id="Flutter项目目录">Flutter项目目录</h3>
+<p><img src="16_Folder.png" alt="Folder"></p>
+<h2 id="Flutter编译模式">Flutter编译模式</h2>
+<p>Flutter有三种方式构建项目，分别是用于发布正式包的<code>Release</code>用于测试性能的<code>Profile</code>和用于日常项目开发的<code>Debug</code>模式，三种构建方式具体的不同在于Dart代码编译模式的不同，在项目开发阶段代码编译模式是<code>JIT</code>，全称 Just In Time，是指在程序运行过程中实时编译执行具体的代码，这让我们在Flutter中获得了Hot Reload，Hot Restart等提高开发效率的功能。</p>
+<p>在项目需要发布时是<code>AOT</code>，全称是 Ahead Of Time，在这种编译模式下程序运行前代码就已经编译为机器码了，而不需要在运行中解释执行，以此来保证应用的性能。</p>
+<p><img src="17_Dart.png" alt="Dart"></p>
+<h2 id="Flutter-Hot-Reload">Flutter Hot Reload</h2>
+<p>触发热重载会扫描项目中文件，将有改动的dart文件转化为标记化源代码kernel files，通过HTTP接口发送到正在设备上运行的DartVM中，DartVM替换本地资源，然后通知Flutter Framework重建、重新布局、重新绘制WidgetsTree，即可看到改动效果。<br>
+<img src="18_Hot_Relod.png" alt="Reload"></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/undefined/Flutter-Sharing-3/" data-toggle="tooltip" data-placement="top" title="「Flutter」状态管理">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/undefined/Flutter-Sharing-1/" data-toggle="tooltip" data-placement="top" title="「Flutter」跨平台技术演进">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-text">Flutter</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B-2"><span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter%E6%9E%B6%E6%9E%84"><span class="toc-nav-text">Flutter架构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0UI"><span class="toc-nav-text">Flutter如何描述UI</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter%E5%B8%B8%E7%94%A8Widget"><span class="toc-nav-text">Flutter常用Widget</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%B9%E5%99%A8Widget"><span class="toc-nav-text">容器Widget</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#SizedBox"><span class="toc-nav-text">SizedBox</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Padding"><span class="toc-nav-text">Padding</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Align"><span class="toc-nav-text">Align</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#DecoratedBox"><span class="toc-nav-text">DecoratedBox</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Container"><span class="toc-nav-text">Container</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%83%E5%B1%80Widget"><span class="toc-nav-text">布局Widget</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Column"><span class="toc-nav-text">Column</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Row"><span class="toc-nav-text">Row</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Stack"><span class="toc-nav-text">Stack</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ListView"><span class="toc-nav-text">ListView</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89Widget"><span class="toc-nav-text">自定义Widget</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAFlutter%E9%A1%B9%E7%9B%AE%E5%B9%B6%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2"><span class="toc-nav-text">例子：创建一个Flutter项目并编写一个页面</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Flutter%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95"><span class="toc-nav-text">Flutter项目目录</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter%E7%BC%96%E8%AF%91%E6%A8%A1%E5%BC%8F"><span class="toc-nav-text">Flutter编译模式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Flutter-Hot-Reload"><span class="toc-nav-text">Flutter Hot Reload</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/archive/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/archive/?tag=Flutter" title="Flutter">Flutter</a>
+            
+            <a class="tag" href="/archive/?tag=技术分享" title="技术分享">技术分享</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/VintLin">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/VintonLin">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Vint
+          2023
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="https://huangxuan.me/">Hux Blog</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=VintLin&repo=VintLin.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://vintlin.github.io/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#4969ed' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+
+		<!-- Search -->
+		
+		<div class="popup search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 local-search-content">
+        <input autocomplete="off" placeholder="SEARCH..." type="text" id="search-input">
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#search-input').val('');
+      $('.search-results').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var subtitle = data.subtitle
+              ? data.subtitle.trim()
+              : '';
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('-1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+              resultItem += "<div class='post-preview item'><a target='_blank' href='" + articleUrl + "'><h2 class='post-title'>" + title + "</h2><h3 class='post-subtitle'>" + subtitle + "</h3><time class='search-result-date'>" + dateTime + "</time><hr></a></div>";
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-results mini-post-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-page').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	</body>
+</html>
