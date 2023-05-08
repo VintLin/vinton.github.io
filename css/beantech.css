@@ -103,7 +103,7 @@ ul, ol {
   margin-bottom: 1.25em;
 }
 
-li {
+.post-container li {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -172,7 +172,16 @@ a:focus div, a:hover div,
 
 a img:hover,
 a img:focus {
-  cursor: zoom-in;
+  cursor: pointer;
+}
+
+.navbar-brand > img {
+  display: inline;
+  width: fit-content;
+  position: absolute;
+  height: 20px;
+  padding: 0px 20px;
+  margin: 2px;
 }
 
 article {
@@ -335,18 +344,8 @@ pre code {
   height: 7.5em;
 }
 
-.navbar-custom .navbar-brand {
-  font-weight: 800;
-  color: #404040;
-  height: 56px;
-  line-height: 25px;
-}
-
-.navbar-custom .navbar-brand:hover {
-  color: #4969ed;
-}
-
-.navbar-custom .nav li a {
+.navbar-custom .nav li a, 
+.navbar-brand {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
@@ -362,17 +361,6 @@ pre code {
   .navbar-custom {
     background: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid #f2f2f2;
-  }
-
-  .navbar-custom .navbar-brand {
-    color: #404040;
-    padding: 15px 0px;
-    line-height: 20px;
-  }
-
-  .navbar-custom .navbar-brand:hover,
-  .navbar-custom .navbar-brand:focus {
-    color: #4969ed;
   }
 
   .navbar-custom .nav li a {
@@ -414,15 +402,6 @@ pre code {
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
-  }
-
-  .navbar-custom.is-fixed .navbar-brand {
-    color: #404040;
-  }
-
-  .navbar-custom.is-fixed .navbar-brand:hover,
-  .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #4969ed;
   }
 
   .navbar-custom.is-fixed .nav li a {
@@ -620,6 +599,7 @@ pre code {
 .post-content-preview {
   font-size: 12px;
   opacity: 0.8;
+  margin-top: 0.5em;
 }
 @media only screen and (min-width: 768px) {
   .post-content-preview {
@@ -845,9 +825,6 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .mini-post-list .post-preview {
-    margin-left: 20px;
-  }
 
   .mini-post-list .post-preview>a>.post-title {
     font-size: 18px;
