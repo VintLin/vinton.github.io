@@ -156,7 +156,8 @@ a:focus, a:hover, a {
   cursor: pointer;
 }
 
-.post-container a, 
+.post-container p a,
+.post-container li a, 
 .copyright a
 {
   color: black;
@@ -166,8 +167,10 @@ a:focus, a:hover, a {
   transition: border .3s ease-in-out;
 }
 
-.post-container a:focus, 
-.post-container a:hover,
+.post-container p a:focus, 
+.post-container p a:hover,
+.post-container li a:focus, 
+.post-container li a:hover, 
 .copyright a:focus, 
 .copyright a:hover
 {
@@ -432,6 +435,7 @@ pre code {
 }
 .post-preview > a {
   color: #404040;
+  display: inline-block;
 }
 .post-preview > a:hover,
 .post-preview > a:focus {
