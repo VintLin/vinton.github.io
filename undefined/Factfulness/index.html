@@ -107,8 +107,7 @@
 
   <!-- Custom Fonts -->
   <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-  <!-- Hux change font-awesome CDN to qiniu -->
-  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <script src="https://kit.fontawesome.com/ae2f9ab055.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
@@ -140,63 +139,71 @@
 		
 
 		<!-- Navigation (contains search)-->
-		<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <a class="navbar-brand" href="/">
-        <img src="/img/avatar/icon_v_web.jpg" alt="logo"/>
-      </a>
+		<div class="container">
+  <div class="row">
+    <div class="
+col-lg-8 col-lg-offset-2 
+col-md-10 col-md-offset-1">
+      <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+          <a class="navbar-brand" href="/">
+            <img src="/img/avatar/icon_v_web.jpg" alt="logo" />
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+        <div id="huxblog_navbar">
+          <div class="navbar-collapse ">
+            <ul class="nav navbar-nav navbar-right">
+              
+                
+                    
+                
+                  <li>
+                    <a href="/about/">
+                      
+                        关于
+                          
+                                
+                    </a>
+                  </li>
+                  
+                    
+                
+                  <li>
+                    <a href="/archive/">
+                      
+                            归档
+                              
+                                
+                    </a>
+                  </li>
+                  
+                    
+
+                      
+                        <li class="search-icon">
+                          <a class="popup-trigger">
+                            <i class="fa fa-search"></i>
+                          </a>
+                        </li>
+                        
+
+                          <!-- LangSelect -->
+                          
+            </ul>
+          </div>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- /.container -->
+
+      </nav>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
-    <div id="huxblog_navbar">
-      <div class="navbar-collapse ">
-        <ul class="nav navbar-nav navbar-right">
-          
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-                归档
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
-              
-              
-            </a>
-          </li>
-          
-          
-
-          
-          <li class="search-icon">
-            <a class="popup-trigger">
-              <i class="fa fa-search"></i>
-            </a>
-          </li>
-          
-
-          <!-- LangSelect -->
-          
-        </ul>
-      </div>
-    </div>
-    <!-- /.navbar-collapse -->
-    <!-- /.container -->
-
-</nav>
+  </div>
+</div>
 <!-- progress -->
 <div id="progress">
   <div class="line" style="width: 0%;"></div>
@@ -216,7 +223,7 @@
       // CLOSE
       $navbar.className = " ";
       // wait until animation end.
-      setTimeout(function() {
+      setTimeout(function () {
         // prevent frequently toggle
         if ($navbar.className.indexOf('in') < 0) {
           $collapse.style.height = "0px"
@@ -230,7 +237,6 @@
   }
 </script>
 
-
 		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
 		<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
@@ -241,7 +247,10 @@
   <div id="signature">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="
+        col-lg-8 col-lg-offset-2 
+        col-md-10 col-md-offset-1
+        ">
           
           <div class="post-heading">
             <h1>十种思维错误及应对建议</h1>
@@ -279,7 +288,10 @@
   <div class="container">
     <div class="row">
       <!-- Post Container -->
-      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+      <div class="
+        col-lg-8 col-lg-offset-2 
+        col-md-10 col-md-offset-1 
+        post-container">
 
         <h1 id="1-「一分为二」"><a href="#1-「一分为二」" class="headerlink" title="1/ 「一分为二」"></a>1/ 「一分为二」</h1><blockquote>
 <p>把世界一分为二是简单、直观而且情绪化的方法。因为这种一分为二的方法，暗示了矛盾冲突。所以我们总是不假思索地采用这种方法，但它会误导我们，把平滑过渡当作两极分化，把和而不同当作分道扬镳，把求同存异当作矛盾对立。</p>
@@ -384,6 +396,13 @@
         <ul class="pager">
           
           
+          <li>
+            <a href="/undefined/The-Molecule-of-More/" title="贪婪的多巴胺">
+              <span>&gt; </span> 
+              贪婪的多巴胺
+            </a>
+          </li>
+          
         </ul>
 
         
@@ -420,24 +439,10 @@
       </div>
 
       <!-- Catalog: Tabe of Content -->
-      <!-- Table of Contents -->
-
-    
-      <aside id="sidebar">
-        <div id="toc" class="toc-article">
-        <strong class="toc-title">目录</strong>
-        
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#1-%E3%80%8C%E4%B8%80%E5%88%86%E4%B8%BA%E4%BA%8C%E3%80%8D"><span class="toc-nav-text">1&#x2F; 「一分为二」</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#2-%E3%80%8C%E8%B4%9F%E9%9D%A2%E6%80%9D%E7%BB%B4%E3%80%8D"><span class="toc-nav-text">2&#x2F; 「负面思维」</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#3-%E3%80%8C%E7%BA%BF%E6%80%A7%E6%80%9D%E7%BB%B4%E3%80%8D"><span class="toc-nav-text">3&#x2F; 「线性思维」</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#4-%E3%80%8C%E6%81%90%E6%83%A7%E6%9C%AC%E8%83%BD%E3%80%8D"><span class="toc-nav-text">4&#x2F; 「恐惧本能」</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#5-%E3%80%8C%E8%A7%84%E6%A8%A1%E9%94%99%E8%A7%89%E3%80%8D"><span class="toc-nav-text">5&#x2F; 「规模错觉」</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#6-%E3%80%8C%E4%BB%A5%E5%81%8F%E6%A6%82%E5%85%A8%E3%80%8D"><span class="toc-nav-text">6&#x2F; 「以偏概全」</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#7-%E3%80%8C%E5%91%BD%E4%B8%AD%E6%B3%A8%E5%AE%9A%E3%80%8D"><span class="toc-nav-text">7&#x2F; 「命中注定」</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#8-%E3%80%8C%E5%8D%95%E4%B8%80%E8%A7%86%E8%A7%92%E3%80%8D"><span class="toc-nav-text">8&#x2F; 「单一视角」</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#9-%E3%80%8C%E5%BD%92%E5%92%8E%E4%BB%96%E4%BA%BA%E3%80%8D"><span class="toc-nav-text">9&#x2F; 「归咎他人」</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#10-%E3%80%8C%E6%83%85%E6%80%A5%E7%94%9F%E4%B9%B1%E3%80%8D"><span class="toc-nav-text">10&#x2F; 「情急生乱」</span></a></li></ol>
-        
-        </div>
-      </aside>
-    
-
-
 
       <!-- Sidebar Container -->
       <div class="
-                col-lg-8 col-lg-offset-1
+                col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
