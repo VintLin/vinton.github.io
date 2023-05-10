@@ -20,7 +20,7 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   color: #404040;
 }
@@ -64,9 +64,12 @@ a.popup-trigger {
 .search-page .search-icon-close-container {
   position: absolute;
   z-index: 1;
-  padding: 16px;
-  top: 0;
-  right: 2px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 30px 15px;
+  right: 0;
 }
 
 .search-icon a, .search-icon-close {

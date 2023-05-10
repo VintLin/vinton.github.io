@@ -160,6 +160,17 @@ col-md-10 col-md-offset-1">
             <ul class="nav navbar-nav navbar-right">
               
                 
+                  <li>
+                    <a href="/archive/">
+                      
+                            归档
+                              
+                                
+                    </a>
+                  </li>
+                  
+                    
+                
                     
                 
                   <li>
@@ -167,17 +178,6 @@ col-md-10 col-md-offset-1">
                       
                         关于
                           
-                                
-                    </a>
-                  </li>
-                  
-                    
-                
-                  <li>
-                    <a href="/archive/">
-                      
-                            归档
-                              
                                 
                     </a>
                   </li>
@@ -445,10 +445,16 @@ start: '#bbbbee', end: '#4969ed' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 		<!-- Search -->
 		
 		<div class="popup search-page">
-  <div class="search-icon-close-container">
-    <span class="search-icon-close">
-      <i class="fa fa-chevron-down"></i>
-    </span>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+        <div class="search-icon-close-container">
+          <span class="search-icon-close">
+            <i class="fa fa-chevron-down"></i>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="search-main container">
     <div class="row">
@@ -551,12 +557,16 @@ start: '#bbbbee', end: '#4969ed' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             var contentInLowerCase = content.toLowerCase();
             var articleUrl = decodeURIComponent(data.url);
 
-            var date = data.date;
-            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var date = new Date(data.date);            
+            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+            ];
+            const month = monthNames[date.getMonth()];
+            const day = date.getDate();
+            const year = date.getFullYear();
+            const dateTime = `${month} ${day}, ${year}`;
+
             var imgUrl = data.header_img;
-            
-
-
             var indexOfTitle = [];
             var indexOfContent = [];
             // only match articles with not empty titles
@@ -683,7 +693,7 @@ start: '#bbbbee', end: '#4969ed' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
               // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
               // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
               // "...</p></a>"; }); resultItem += "</li>";
-              resultItem += "<div class='post-preview item'><a target='_blank' href='" + articleUrl + "'><h2 class='post-title'>" + title + "</h2><h3 class='post-subtitle'>" + subtitle + "</h3><time class='search-result-date'>" + dateTime + "</time><hr></a></div>";
+              resultItem += "<div class='post-preview item'><a target='_blank' href='" + articleUrl + "'><h2 class='post-title'>" + title + "</h2><h3 class='post-subtitle'>" + dateTime + "</h3></a></div>";
               resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
             }
           })
