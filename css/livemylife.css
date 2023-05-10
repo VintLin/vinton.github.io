@@ -381,3 +381,9 @@ li.archive-list-item:hover a {
 ::-webkit-scrollbar-corner {
   background: white;
 }
+
+i.fa-solid, i.fa-regular, i.fa-brands {
+  width: 20px;
+  text-align: center;
+  margin-left: -2px;
+}

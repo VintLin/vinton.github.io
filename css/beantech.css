@@ -172,10 +172,10 @@ a:focus, a:hover, a {
   transition: border .3s ease-in-out;
 }
 
-.post-container p a:focus, 
+.post-container p a:focus,
 .post-container p a:hover,
-.post-container li a:focus, 
-.post-container li a:hover, 
+.post-container li a:focus,
+.post-container li a:hover,
 .copyright a:focus, 
 .copyright a:hover
 {
@@ -772,7 +772,7 @@ body {
 
 /* Tags support End*/
 /* Hux make all img responsible in post-container */
-.post-container img {
+.post-container p > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -780,6 +780,14 @@ body {
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
   -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
   -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+}
+
+.post-container a img {
+  height: 15px;
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-right: 2px;
+  vertical-align: text-top;
 }
 
 /* Hux Optimize UserExperience */
