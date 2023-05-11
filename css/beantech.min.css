@@ -175,6 +175,12 @@ a:focus, a:hover, a {
   border-bottom: 1px solid black;
 }
 
+li a:focus.non-border,
+li a:hover.non-border,
+li a.non-border {
+  border: none;
+}
+
 a h2, 
 a h3, 
 a div,
