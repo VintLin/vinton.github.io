@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://vinton.store/undefined/ChatGPT-Prompt-Engineering-for-Developers/</loc>
+    
+    <lastmod>2023-05-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://vinton.store/undefined/Anti-Wasteman-System/</loc>
     
     <lastmod>2023-05-17</lastmod>
@@ -106,14 +115,14 @@
   </url>
   
   <url>
-    <loc>https://vinton.store/categories/%E9%98%85%E8%AF%BB/</loc>
+    <loc>https://vinton.store/categories/%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2023-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://vinton.store/categories/%E6%96%B9%E6%B3%95/</loc>
+    <loc>https://vinton.store/categories/%E9%98%85%E8%AF%BB/</loc>
     <lastmod>2023-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
