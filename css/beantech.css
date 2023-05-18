@@ -201,7 +201,12 @@ li a.non-border {
   border: none;
 }
 
-a h2, 
+a h2 {
+  opacity: 0.8;
+  transition: opacity .3s ease-in-out;
+  text-decoration: none;
+}
+
 a h3, 
 a div,
 #tag_cloud a,
