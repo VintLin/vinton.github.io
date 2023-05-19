@@ -143,7 +143,7 @@
   <div class="row">
     <div class="
 col-lg-8 col-lg-offset-2 
-col-md-10 col-md-offset-1">
+col-md-8 col-md-offset-2">
       <!-- Navigation -->
       <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -249,7 +249,7 @@ col-md-10 col-md-offset-1">
       <div class="row">
         <div class="
         col-lg-8 col-lg-offset-2 
-        col-md-10 col-md-offset-1
+        col-md-8 col-md-offset-2
         ">
           
           <div class="post-heading">
@@ -290,15 +290,15 @@ col-md-10 col-md-offset-1">
       <!-- Post Container -->
       <div class="
         col-lg-8 col-lg-offset-2 
-        col-md-10 col-md-offset-1 
+        col-md-8 col-md-offset-2
         post-container">
 
         <blockquote>
-<p><strong>教程链接：<a target="_blank" rel="noopener" href="https://learn.deeplearning.ai/">ChatGPT Prompt Engineering for Developers</a></strong></p>
-<p><strong>中文字幕视频地址：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Bo4y1A7FU/?share_source=copy_web">吴恩达 x OpenAI的Prompt Engineering课程专业翻译版</a></strong></p>
-<p><strong>中英双语字幕下载：<a target="_blank" rel="noopener" href="https://github.com/GitHubDaily/ChatGPT-Prompt-Engineering-for-Developers-in-Chinese">《ChatGPT提示工程》非官方版中英双语字幕</a></strong></p>
+<p>原教程： <a target="_blank" rel="noopener" href="https://learn.deeplearning.ai/">ChatGPT Prompt Engineering for Developers</a></p>
+<p>中文翻译： <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Bo4y1A7FU/?share_source=copy_web">吴恩达 x OpenAI的Prompt Engineering课程专业翻译版</a></p>
+<p>中英字幕： <a target="_blank" rel="noopener" href="https://github.com/GitHubDaily/ChatGPT-Prompt-Engineering-for-Developers-in-Chinese">《ChatGPT提示工程》非官方版中英双语字幕</a></p>
 </blockquote>
-<p>本文是对ChatGPT Prompt Engineering for Developers课程内容的总结归档，并且把课程中的英文Prompt翻译为中文，方便理解和学习。</p>
+<p>本文是对ChatGPT Prompt Engineering for Developers课程内容的总结归档，另外课程中的英文Prompt也翻译为中文，方便理解和学习。</p>
 <h1>原则一：清楚和具体的指示</h1>
 <h2 id="策略1：使用分隔符">策略1：使用分隔符</h2>
 <ul>
@@ -316,7 +316,7 @@ col-md-10 col-md-offset-1">
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">生成一个包含三个虚构书名以及它们的作者和类型的列表。 </span></span><br><span class="line"><span class="string">以JSON格式提供，包含以下键： </span></span><br><span class="line"><span class="string">book_id, title, author, genre.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">response = get_completion(prompt)</span><br><span class="line"><span class="built_in">print</span>(response)</span><br></pre></td></tr></table></figure>
 <h2 id="策略3：检查条件是否满足检查完成任务所需的假设">策略3：检查条件是否满足检查完成任务所需的假设</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">text_1 = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">做一杯茶很简单！首先，你需要烧一些开水。在这个过程中，\</span></span><br><span class="line"><span class="string">拿一个杯子，放入一个茶包。一旦水热了，就把它倒在茶包上。\</span></span><br><span class="line"><span class="string">让它坐一会儿，让茶可以浸泡。几分钟后，取出茶包。如果你\</span></span><br><span class="line"><span class="string">喜欢，可以加一些糖或牛奶调味。\</span></span><br><span class="line"><span class="string">就这样！你就有了一杯美味的茶可以享用了。</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">prompt = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">你将得到由三重反引号括起的文本。</span></span><br><span class="line"><span class="string">如果它包含一系列的指示，\</span></span><br><span class="line"><span class="string">将这些指示重写为以下格式：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">步骤1 - ...</span></span><br><span class="line"><span class="string">步骤2 - ...</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">步骤N - ...</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">如果文本中没有包含一系列的指示，\</span></span><br><span class="line"><span class="string">那么只需写\&quot;没有提供步骤。\&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;<span class="subst">&#123;text_1&#125;</span>&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">response = get_completion(prompt)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;对于文本1的完成：&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(response)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">text_2 = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">今天阳光明媚，鸟儿在歌唱。这是一个美好的日子，适合在公园散步。花儿在盛开，\</span></span><br><span class="line"><span class="string">树木在微风中轻轻摇曳。人们都出来了，</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">享受着美好的天气。有些人在野餐，有些人在玩游戏，或者只是在草地上放松。这是一个完美的日子，可以在户外度过，欣赏大自然的美丽。</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">prompt = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">你将得到由三重引号括起的文本。</span></span><br><span class="line"><span class="string">如果它包含一系列的指示，\</span></span><br><span class="line"><span class="string">将这些指示重写为以下格式：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">步骤1 - ...</span></span><br><span class="line"><span class="string">步骤2 - …</span></span><br><span class="line"><span class="string">…</span></span><br><span class="line"><span class="string">步骤N - …</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">如果文本中没有包含一系列的指示，\</span></span><br><span class="line"><span class="string">那么只需写\&quot;没有提供步骤。\&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;<span class="subst">&#123;text_2&#125;</span>&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">response = get_completion(prompt)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;对于文本2的完成：&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(response)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">text_2 = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">今天阳光明媚，鸟儿在歌唱。这是一个美好的日子，适合在公园散步。花儿在盛开，\</span></span><br><span class="line"><span class="string">树木在微风中轻轻摇曳。人们都出来了，</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">享受着美好的天气。有些人在野餐，有些人在玩游戏，或者只是在草地上放松。这是一个完美的日子，可以在户外度过，欣赏大自然的美丽。</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">prompt = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">你将得到由三重引号括起的文本。</span></span><br><span class="line"><span class="string">如果它包含一系列的指示，\</span></span><br><span class="line"><span class="string">将这些指示重写为以下格式：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">步骤1 - ...</span></span><br><span class="line"><span class="string">步骤2 - ...</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="string">步骤N - ...</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">如果文本中没有包含一系列的指示，\</span></span><br><span class="line"><span class="string">那么只需写\&quot;没有提供步骤。\&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;<span class="subst">&#123;text_2&#125;</span>&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">response = get_completion(prompt)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;对于文本2的完成：&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(response)</span><br></pre></td></tr></table></figure>
 <h2 id="策略4：少样本提示。">策略4：少样本提示。</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">你的任务是以一致的风格回答。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;child&gt;: 教我什么是耐心。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;grandparent&gt;: 深刻的河谷是由一股温和的泉水流出的；\</span></span><br><span class="line"><span class="string">宏伟的交响乐源于一个单音；\</span></span><br><span class="line"><span class="string">最复杂的挂毯始于一根孤独的线。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;child&gt;: 教我什么是韧性。</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">response = get_completion(prompt)</span><br><span class="line"><span class="built_in">print</span>(response)</span><br></pre></td></tr></table></figure>
 <h1>原则二：给模型时间”思考”</h1>
@@ -506,7 +506,7 @@ col-md-10 col-md-offset-1">
       <!-- Sidebar Container -->
       <div class="
                 col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
+                col-md-8 col-md-offset-2
                 sidebar-container">
 
         <!-- Featured Tags -->
@@ -577,7 +577,7 @@ col-md-10 col-md-offset-1">
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
         <p class="copyright text-muted">
           <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
           2023-PRESENT &copy;
@@ -670,7 +670,7 @@ start: '#bbbbee', end: '#4969ed' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 		<div class="popup search-page">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 ">
         <div class="search-icon-close-container">
           <span class="search-icon-close">
             <i class="fa fa-chevron-down"></i>
@@ -681,7 +681,7 @@ start: '#bbbbee', end: '#4969ed' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
   </div>
   <div class="search-main container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 local-search-content">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 local-search-content">
         <input autocomplete="off" placeholder="搜索..." type="text" id="search-input">
         <div id="local-search-result"></div>
       </div>

@@ -1,239 +1,174 @@
-.container {
-  padding-left: 1.75em;
-  padding-right: 1.75em;
-  margin-right: auto;
-  margin-left: auto;
-}
-.sidebar-container {
-  color: #bfbfbf;
-  font-size: 14px;
-}
-.sidebar-container h5 {
-  color: gray;
-  padding-bottom: 1em;
-  text-transform: uppercase;
-}
-.sidebar-container h5 a {
-  color: #808080 !important;
-  text-decoration: none;
-}
-.sidebar-container a {
-  color: #bfbfbf !important;
-}
-.sidebar-container a:hover,
-.sidebar-container a:active {
-  color: #4969ed !important;
-}
-.sidebar-container .short-about img {
-  width: 80%;
-  display: block;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-.sidebar-container .short-about p {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-.sidebar-container .short-about .list-inline > li {
-  padding-left: 0;
-}
-
 body {
-  font-family: Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
-  color: #444;
-  font-size: 16px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #222;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 2em;
   overflow-x: hidden;
   overflow-y: overlay;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5, h6
-{
-  font-family: Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.1;
-  font-weight: bold;
+h1, h2, h3, h4, h5, p, ul, ol {
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, strong {
+  font-weight: 700;
 }
 
 .h1, h1 {
-  color: #222;
-  font-weight: 700;
   font-size: 1.6em;
   margin-top: 2em;
-  margin-bottom: 1em;
-  line-height: 1.3333333
 }
 
 .h2, h2 {
-  color: #222;
-  font-weight: 600;
   font-size: 1.4em;
   margin-top: 1.6em;
-  margin-bottom: .6em;
-  line-height: 1.6;
 }
 
 .h3, h3 {
-  color: #222;
-  font-weight: 600;
   font-size: 1.2em;
-  margin-top: 1.5em;
-  margin-bottom: .5em;
-  line-height: 1.5
+  margin-top: 1.4em;
 }
 
 .h4, h4 {
-  color: #555;
+  font-size: 1em;
+  margin-top: 1.2em;
+}
+
+.p, p, .ol, ol, .ul, ul {
+  margin-top: 0.80em;
+}
+
+.post-container p > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5em auto 1.6em auto;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.post-container figure {
+  display: block;
+  max-width: 100%;
+  border-radius: 0.5em;
+}
+
+a,
+.navbar-custom .nav li a {
+  cursor: pointer;
+  position: relative;
+  color: black;
   font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: .5em;
-  line-height: 1.5
+  text-decoration: none;
+  transition: color .3s ease-in-out, border .3s ease-in-out;
 }
 
-.p, p {
-  font-weight: 500;
-  line-height: 1.75;
-  font-size: 1em;
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
+a:focus, a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:hover {
+  color: rgb(255, 120, 0);
+  text-decoration: none;
+  opacity: 1;
 }
 
-.strong, strong {
-  color: #222;
+.post-container a {
+  border-bottom: 1px solid rgba(125,125,125,.3);
 }
 
-.post-container>ul, .post-container>ol {
-  font-weight: 500;
-  line-height: 1.75;
-  font-size: 1em;
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
+.post-container a:focus, .post-container a:hover{
+  border-bottom: 1px solid rgb(255, 120, 0);
 }
 
-.post-container li {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+.pager a:focus, .pager a:hover, .pager a {
+  border: none;
 }
 
 #tag_cloud a {
-  cursor: pointer;
-  font-weight: 600;
-  border-style: none;
+  color: #888;
+  font-weight: 700;
   font-size: 20px;
-  line-height: 2.25em;
-  margin-right: 0.5em;
+  margin-right: 20px;
+}
+
+#tag_cloud .focus {
+  color: black;
+}
+
+#tag_cloud a:focus, #tag_cloud a:hover {
+  color: #222;
+}
+
+.post-preview > a {
+  display: block;
+}
+
+.post-preview .post-title {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.post-preview .post-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.post-preview .post-content-preview {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 0.5em;
+  line-height: 1.5em;
+}
+
+.post-title, .post-subtitle, .post-content-preview {
+  display: inline-block;
+}
+
+.post-container a img {
+  height: 15px;
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-right: 2px;
+  vertical-align: text-top;
 }
 
 @media only screen and (min-width: 840px) {
   #tag_cloud a {
     font-size: 26px;
   }
-}
-#sidebar {
-  visibility: hidden;
-}
-@media only screen and (min-width: 1000px) {
-  #sidebar {
-    visibility: visible;
-    display: inline-block;
-    white-space: nowrap;
-    position: fixed;
-    float: right;
-    margin-top: auto;
-    top: 140px;
+  .post-preview .post-title {
+    font-size: 22px;
   }
-  
-  .toc-nav-level-1,
-  .toc-nav-level-2,
-  .toc-nav-level-3,
-  .toc-nav-level-4 {
-    font-weight: 500;
-    line-height: 2;
-    font-size: 16px;
-  }
-  
-  .toc-nav-level-1 {
-    font-weight: 800;
+  .post-preview .post-subtitle {
     font-size: 18px;
   }
+  .post-preview .post-content-preview {
+    font-size: 14px;
+  }
 }
 
-a:focus, a:hover, a {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.mini-post-list .tag-text {
+  -webkit-user-select: none; /* Safari 和 Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  user-select: none;
+  font-weight: 800;
+  font-family: Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+  line-height: 1.75;
+  top: -32px;
+  left: -28px;
+  font-size: 128px;
+  opacity: .08;
+  position: relative;
 }
 
-.post-container p a,
-.post-container li a, 
-.copyright a
-{
-  color: black;
-  font-weight: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(125,125,125,.3);
-  transition: border .3s ease-in-out;
-}
-
-.post-container p a:focus,
-.post-container p a:hover,
-.post-container li a:focus,
-.post-container li a:hover,
-.copyright a:focus, 
-.copyright a:hover
-{
-  color: black;
-  text-decoration: none;
-  border-bottom: 1px solid black;
-}
-
-li a:focus.non-border,
-li a:hover.non-border,
-li a.non-border {
-  border: none;
-}
-
-a h2
-{
-  opacity: 0.8;
-  transition: opacity .3s ease-in-out;
-  text-decoration: none;
-}
-
-a h3, 
-a div,
-#tag_cloud a,
-.toc-nav a
-{
-  opacity: 0.6;
-  transition: opacity .3s ease-in-out;
-  text-decoration: none;
-}
-
-a:focus h2, a:hover h2, 
-a:focus h3, a:hover h3, 
-a:focus div, a:hover div,
-#tag_cloud a:focus, 
-#tag_cloud a:hover,
-.toc-nav a:focus,
-.toc-nav a:hover
-{
-  opacity: 1;
-  text-decoration: none;
-}
-
-#tag_cloud a {
-  color: #555;
-}
-
-#tag_cloud .focus {
-  opacity: 1;
-  color: black;
-}
-
-a img:hover,
-a img:focus {
-  cursor: pointer;
+a.navbar-brand {
+ width: 60px;
 }
 
 .navbar-brand > img {
@@ -241,6 +176,7 @@ a img:focus {
   width: fit-content;
   position: absolute;
   height: 20px;
+  pointer-events: none;
 }
 .navbar-header {
   position: absolute;
@@ -251,6 +187,8 @@ a img:focus {
 }
 .navbar-nav {
   margin: 0px;
+  display: flex;
+  white-space: nowrap;
 }
 .navbar-nav>li {
   float: left;
@@ -263,16 +201,19 @@ article {
   overflow: hidden;
 }
 blockquote {
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.5em;
-  font-size: 1em;
-  padding: 0.6em 1.2em;
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  padding: 0.8em 1.2em;
   opacity: .8;
+  border-left: 5px solid #7a7a7a;
 }
-blockquote p {
+
+blockquote p, blockquote ul, blockquote ol {
   margin: 0;
+  line-height: 2em;
 }
+
 small.img-hint {
   display: block;
   margin-top: -20px;
@@ -333,11 +274,6 @@ pre code {
   left: 0;
   width: 100%;
   z-index: 3;
-  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC",
-    "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei",
-    "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN",
-    "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC",
-    "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
 }
 
@@ -347,12 +283,12 @@ pre code {
 
 .navbar-custom .nav li a, 
 .navbar-brand {
-  font-size: 16px;
-  line-height: 20px;
   font-weight: 500;
-  letter-spacing: 1px;
+  font-size: 16px;
+  letter-spacing: 0.1em;
   padding: 30px 15px;
 }
+
 .intro-header {
   background: no-repeat center center;
   background-color: #ffffff;
@@ -451,68 +387,6 @@ pre code {
 }
 .intro-header .post-heading .meta a {
   color: white;
-}
-.post-preview > a {
-  display: inline-block;
-  color: #404040;
-}
-.post-preview > a:hover,
-.post-preview > a:focus {
-  text-decoration: none;
-}
-.post-preview > a > .post-title {
-  font-size: 20px;
-  line-height: 1.3;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  display: inline-block;
-}
-.post-preview > a > .post-subtitle {
-  font-size: 16px;
-  line-height: 1.3;
-  margin: 0;
-  font-weight: 300;
-  margin-bottom: 10px;
-  display: inline-block;
-}
-.post-preview > .post-meta {
-  color: #a3a3a3;
-  font-size: 13px;
-  line-height: 1.3;
-  margin: 0;
-  font-weight: 300;
-  margin-top: 4px;
-}
-.post-preview > .post-meta > a {
-  text-decoration: none;
-  color: #404040;
-}
-.post-preview > .post-meta > a:hover,
-.post-preview > .post-meta > a:focus {
-  text-decoration: none;
-}
-@media only screen and (min-width: 840px) {
-  .post-preview > a > .post-title {
-    font-size: 26px;
-    line-height: 1.3;
-    margin-bottom: 10px;
-  }
-  .post-preview > a > .post-subtitle {
-    font-size: 18px;
-  }
-  .post-preview .post-meta {
-    font-size: 15px;
-  }
-}
-.post-content-preview {
-  font-size: 12px;
-  opacity: 0.8;
-  margin-top: 0.5em;
-}
-@media only screen and (min-width: 840px) {
-  .post-content-preview {
-    font-size: 14px;
-  }
 }
 .section-heading {
   font-size: 36px;
@@ -625,8 +499,8 @@ form .row:first-child .floating-label-form-group {
   font-family: DM Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   display: block;
   border: none;
+  font-weight: 400;
   text-align: left;
-  color: gray;
   background-color: transparent;
   border-radius: 0px;
   padding: 8px 0px;
@@ -634,7 +508,6 @@ form .row:first-child .floating-label-form-group {
 
 .pager li > a:hover,
 .pager li > a:focus {
-  color: black;
   background-color: transparent;
 }
 .pager .disabled > a,
@@ -684,65 +557,6 @@ img::-moz-selection {
 }
 .listing-seperator {
   height: 80px;
-}
-.mini-post-list .tag-text {
-  font-weight: 800;
-  font-family: Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
-  line-height: 1.75;
-  top: -32px;
-  left: -28px;
-  font-size: 128px;
-  opacity: .08;
-  position: relative;
-}
-.mini-post-list .post-preview {
-  position: relative;
-}
-.mini-post-list .post-preview > a .post-title {
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 8px;
-  margin-bottom: 24px;
-}
-.mini-post-list .post-preview > a .post-subtitle {
-  font-size: 14px;
-}
-.mini-post-list .post-preview > .post-meta {
-  position: absolute;
-  right: 5px;
-  bottom: 0;
-  margin: 0;
-  font-size: 12px;
-  line-height: 12px;
-}
-@media only screen and (min-width: 840px) {
-  .mini-post-list .post-preview > a > .post-title {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-  .mini-post-list .post-preview > a > .post-subtitle {
-    font-size: 14px;
-  }
-  .mini-post-list .post-preview .post-meta {
-    font-size: 18px;
-  }
-}
-.post-container p > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1.5em auto 1.6em auto;
-  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
-}
-
-.post-container a img {
-  height: 15px;
-  margin-top: 2px;
-  margin-left: 1px;
-  margin-right: 2px;
-  vertical-align: text-top;
 }
 
 .navbar-default .navbar-toggle:focus,
