@@ -163,10 +163,10 @@ col-md-8 col-md-offset-2">
                     
                 
                   <li>
-                    <a href="/about/">
+                    <a href="/archive/">
                       
-                        关于
-                          
+                            归档
+                              
                                 
                     </a>
                   </li>
@@ -174,10 +174,10 @@ col-md-8 col-md-offset-2">
                     
                 
                   <li>
-                    <a href="/archive/">
+                    <a href="/about/">
                       
-                            归档
-                              
+                        关于
+                          
                                 
                     </a>
                   </li>
@@ -322,11 +322,11 @@ col-md-8 col-md-offset-2">
 <p>先获取Fork仓库的Git地址：<br>
 <img src="Push_1.jpg" alt="Get Url"></p>
 <p>在本地使用<code>git clone</code>获取代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git <span class="built_in">clone</span> https://github.com/VintLin/Running.git</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token operator">></span> <span class="token function">git</span> clone https://github.com/VintLin/Running.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>修改代码后使用 <code>git commit</code> 提交代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git commit -m <span class="string">&quot;commit: update something&quot;</span></span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token operator">></span> <span class="token function">git</span> commit -m <span class="token string">"commit: update something"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>最后使用 <code>git push</code> 更新远端的代码仓库：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git push -u origin master</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token operator">></span> <span class="token function">git</span> push -u origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="3-发起Pull-Request">3. 发起Pull Request</h2>
 <p>回到原来的代码仓库下，到**「Pull requests」<strong>页面，点击</strong>「New pull request」**：<br>
 <img src="PR_1.jpg" alt="Pull Request"></p>
@@ -344,9 +344,17 @@ col-md-8 col-md-offset-2">
 </ol>
 <p>第一个方法这里就不多做赘述了，这边简单讲讲第二种方法。</p>
 <h2 id="1-在Fork仓库中新增远端仓库">1. 在Fork仓库中新增远端仓库</h2>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打开Fork仓库的本地路径</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="built_in">cd</span> &lt;Fork仓库的本地路径&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新增远端仓库（upstream），此仓库指向原仓库，此处即使用：</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">https://github.com/yihong0618/running_page.git</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git remote add upstream &lt;原仓库Git地址&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">检查分支信息</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git branch -a</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 打开Fork仓库的本地路径</span>
+<span class="token operator">></span> <span class="token builtin class-name">cd</span> <span class="token operator">&lt;</span>Fork仓库的本地路径<span class="token operator">></span>
+
+<span class="token comment"># 新增远端仓库（upstream），此仓库指向原仓库，此处即使用：</span>
+<span class="token comment"># https://github.com/yihong0618/running_page.git</span>
+<span class="token operator">></span> <span class="token function">git</span> remote <span class="token function">add</span> upstream <span class="token operator">&lt;</span>原仓库Git地址<span class="token operator">></span>
+
+<span class="token comment"># 检查分支信息</span>
+<span class="token operator">></span> <span class="token function">git</span> branch -a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="2-从远端仓库获取最新的提交历史和文件更改">2. 从远端仓库获取最新的提交历史和文件更改</h2>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git fetch upstream</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token operator">></span> <span class="token function">git</span> fetch upstream<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="3-将原仓库更改内容同步Fork仓库">3. 将原仓库更改内容同步Fork仓库</h2>
 <p>到此步骤即可在本地解决代码冲突，之后进行Pull Request。</p>
 <h1>参考链接</h1>
