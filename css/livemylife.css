@@ -382,8 +382,16 @@ li.archive-list-item:hover a {
   background: white;
 }
 
-i.fa-solid, i.fa-regular, i.fa-brands {
+i.fa-solid, i.fa-regular, i.fa-brands, i.fa {
   width: 20px;
   text-align: center;
+  font-size: 1em;
+  line-height: inherit;
+}
+
+.post-container i.fa-solid, 
+.post-container i.fa-regular, 
+.post-container i.fa-brands,
+.post-container i.fa {
   margin-left: -2px;
 }

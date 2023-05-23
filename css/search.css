@@ -10,7 +10,8 @@
   color: #333;
   z-index: 9999;
   border-radius: 5px;
-  overflow: scroll;
+  overflow-y: overlay;
+  overflow-x: hidden;
 }
 
 .search-page #search-input {
@@ -68,21 +69,9 @@ a.popup-trigger {
   line-height: 20px;
   font-weight: 500;
   letter-spacing: 1px;
-  padding: 30px 15px;
+  padding: 25px 15px;
+  margin: 0px 25px;
   right: 0;
-}
-
-.search-icon a, .search-icon-close {
-  cursor: pointer;
-  font-size: 30px;
-  color: #311e3e;
-  -webkit-transition: all .25s;
-  transition: all .25s;
-}
-
-.search-icon, .search-icon-close {
-  font-size: 16px;
-  width: 50px;
 }
 
 .search-page .search-main {
