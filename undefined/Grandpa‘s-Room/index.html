@@ -111,10 +111,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://vinton.store/undefined/How-to-pull-request-on-Github/">
+  <link rel="canonical" href="https://vinton.store/undefined/Grandpa‘s-Room/">
   <title>
     
-      如何在Github上发起一个Pull Request？ - Vint
+      外公的房间 - Vint
     
   </title>
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -282,10 +282,10 @@
         ">
           
           <div class="post-heading">
-            <h1 class="fancy-undeline">如何在Github上发起一个Pull Request？</h1>
+            <h1 class="fancy-undeline">外公的房间</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
-              May 11, 2023
+              Mar 28, 2021
             </span>
           </div>
           
@@ -322,51 +322,19 @@
         col-md-8 col-md-offset-2
         post-container">
 
-        <p>因为受到<a target="_blank" rel="noopener" href="https://antfu.me/posts/about-yak-shaving-zh">Yak Shaving</a>的启发，打算为开源项目贡献一份力。以下是记录在Github上发起Pull Request时碰到的问题。</p>
-<h1 id="什么是Pull-Request"><a href="#什么是Pull-Request" class="headerlink" title="什么是Pull Request?"></a>什么是Pull Request?</h1><p>Pull Request是向代码仓库贡献代码的方式。</p>
-<p>Pull Request通常步骤如下：</p>
-<ul>
-<li>复制（Fork）代码仓库到你自己的Github账号下。</li>
-<li>因为这个复制的代码仓库在你自己的账号下，所以你有完整的权限，你就可以在此之上进行修改。</li>
-<li>将修改内容提交（Push）到自己的代码仓库中。</li>
-<li>发送消息（Pull Request）告知原作者，让他知道你的修改内容。</li>
-<li>由原作者来合并（Merge）你的修改到他的代码仓库中。</li>
-</ul>
-<blockquote>
-<p>什么是Fork?</p>
-<p>当我们喜欢某个代码仓库时，希望能将它添加到自己的Github账号下时，我们会使用Fork，以便单独使用它。</p>
-<p>当我们Fork一个代码仓库时，我们会得到这个代码仓库的完整代码。之后就可以以此为基础进行修改，而不会影响到原仓库，而想要让修改同步到原仓库就需要对原仓库提交PR。</p>
-</blockquote>
-<h1 id="如何提交Pull-Reqeust？"><a href="#如何提交Pull-Reqeust？" class="headerlink" title="如何提交Pull Reqeust？"></a>如何提交Pull Reqeust？</h1><p>以<a target="_blank" rel="noopener" href="https://github.com/yihong0618">yihong</a>的<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">running_page</a>项目为例，<a target="_blank" rel="noopener" href="https://github.com/VintLin">我</a>要如何发起Pull Request：</p>
-<h2 id="1-创建Fork"><a href="#1-创建Fork" class="headerlink" title="1. 创建Fork"></a>1. 创建Fork</h2><p>点击仓库上方的 <strong>「Fork」</strong>：<br><img src="Fork_1.jpg" alt="Fork"></p>
-<p>配置相关参数，之后点击 <strong>「Create fork」</strong>：<br><img src="Fork_2.jpg" alt="Create Fork"></p>
-<p>这样我就在自己的Github账号下创建了一个Fork仓库：<br><img src="Fork_3.jpg" alt="New Project"></p>
-<h2 id="2-修改代码"><a href="#2-修改代码" class="headerlink" title="2. 修改代码"></a>2. 修改代码</h2><p>先获取Fork仓库的Git地址：<br><img src="Push_1.jpg" alt="Get Url"></p>
-<p>在本地使用<code>git clone</code>获取代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git <span class="built_in">clone</span> https://github.com/VintLin/Running.git</span></span><br></pre></td></tr></table></figure>
-<p>修改代码后使用 <code>git commit</code> 提交代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git commit -m <span class="string">&quot;commit: update something&quot;</span></span></span><br></pre></td></tr></table></figure>
-<p>最后使用 <code>git push</code> 更新远端的代码仓库：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git push -u origin master</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-发起Pull-Request"><a href="#3-发起Pull-Request" class="headerlink" title="3. 发起Pull Request"></a>3. 发起Pull Request</h2><p>回到原来的代码仓库下，到 <strong>「Pull requests」</strong> 页面，点击 <strong>「New pull request」</strong>：<br><img src="PR_1.jpg" alt="Pull Request"></p>
-<p>点击 <strong>「compare across forks」</strong>，选择代码仓库(VintLin/Running)和分支(master)，点击 <strong>「Create pull request」</strong>：<br><img src="PR_2.jpg" alt="Pull Request"></p>
-<p>填写 <strong>标题</strong>以及 <strong>补充信息</strong>，最后点击 <strong>「Create pull request」</strong>：<br><img src="PR_3.jpg" alt="Pull Request"></p>
-<p>最后，在原仓库下的 <strong>Pull requests</strong>页面中就可以看到你的PR啦，之后等待仓库拥有者同意就好了~</p>
-<h1 id="如何同步原仓库的代码到Fork的仓库中？"><a href="#如何同步原仓库的代码到Fork的仓库中？" class="headerlink" title="如何同步原仓库的代码到Fork的仓库中？"></a>如何同步原仓库的代码到Fork的仓库中？</h1><p>在你Fork后原仓库有更新时，Fork的代码仓库并不会跟着更新，当你提交PR时会发现有代码冲突。</p>
-<p>此时有两种方法来解决这个问题：</p>
-<ol>
-<li>删除你的Fork仓库，重新创建Fork进行Pull Request。</li>
-<li>将原仓库的更新内容合并（Merge）到你的Fork仓库中。</li>
-</ol>
-<p>第一个方法这里就不多做赘述了，这边简单讲讲第二种方法。</p>
-<h2 id="1-在Fork仓库中新增远端仓库"><a href="#1-在Fork仓库中新增远端仓库" class="headerlink" title="1. 在Fork仓库中新增远端仓库"></a>1. 在Fork仓库中新增远端仓库</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打开Fork仓库的本地路径</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="built_in">cd</span> &lt;Fork仓库的本地路径&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新增远端仓库（upstream），此仓库指向原仓库，此处即使用：</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">https://github.com/yihong0618/running_page.git</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git remote add upstream &lt;原仓库Git地址&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">检查分支信息</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git branch -a</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-从远端仓库获取最新的提交历史和文件更改"><a href="#2-从远端仓库获取最新的提交历史和文件更改" class="headerlink" title="2. 从远端仓库获取最新的提交历史和文件更改"></a>2. 从远端仓库获取最新的提交历史和文件更改</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git fetch upstream</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-将原仓库更改内容同步Fork仓库"><a href="#3-将原仓库更改内容同步Fork仓库" class="headerlink" title="3. 将原仓库更改内容同步Fork仓库"></a>3. 将原仓库更改内容同步Fork仓库</h2><p>到此步骤即可在本地解决代码冲突，之后进行Pull Request。</p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/">How to make your first pull request on GitHub</a></li>
-<li><a target="_blank" rel="noopener" href="https://gitbook.tw/chapters/github/pull-request">與其它開發者的互動 - 使用 Pull Request（PR）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/selfteaching/the-craft-of-selfteaching/issues/67">Github进行fork后如何与原仓库同步</a></li>
-</ul>
+        <p>再次打开那扇黄色木门已经是外公出殡的日子，站在门外稍微回想房间的摆设，六七平的房间，进门左手边是单人床，床前小半米高的木架上面摆了个红褐色的木箱，箱子里应该装了些外公的衣物，也许还有其他些什么，我是极少看见其打开的，按理小孩的好奇心足以成为打开木箱的钥匙，但我从来没打开过，它右边的双开门玻璃电视柜上是老式大头电视，印象里从这间房间出现在我的视野里电视就已经存在了，记得最近一次打开电视屏幕上已经出现明显的色彩错位，电视和木箱背后是房间唯一的窗户，虽说是唯一的，但它占了差不多半面朝北的墙，东面的墙上贴了张中国地图，旁边又挂了册红色的日历，日历前有个稍大的暗红色中国结，地图发黄发皱，日历在记忆里好像从来没换过，也没仔细留意，就觉得它应该在那里。靠东面墙摆放着几条常见的塑料凳，通常是两条，它们应该是房间里最常变动的物品。回忆到此略感惊讶的是房间的存在接近二十年，却和最初记忆里的模样别无二致。</p>
+<p>被腐蚀的不再光滑的铜黄圆钮门把触感冰凉，右旋半圈，推门，关于房间的记忆被重置清零。站在四四方方的盒子里，我是里面唯一的物件。东面墙壁周围泛黄的墙面衬出正中间的大片空白，用于固定地图边角的胶布被撕个干净，唯独留下右下角的那一段，隔着胶布的是半只黑红花纹蝴蝶的残翅，望着它出了神。</p>
+<p>过去的几十年里一连串的寒暑假，许多莫名的影像稀稀疏疏的交叠涌现，有些时候是自己一个人躲在房间里看电视直到晚霞把房间染红；还有些时候是站在电视旁，透过铝制边框包裹的蓝色玻璃，看着外面的几亩田地发呆；还有早晨从电视机中传来点播台每日必放的名叫《回家》的萨克斯吹奏的曲子；但大多数片段是外公和三两个朋友在不开灯的房间里边看新闻联播边聊天的情景。依稀记得，某年除夕夜大家聚集在这个房间里电视在播放，我们在聊天，大人们笑着，嚷着，小孩们跳着，闹着。</p>
+<p>恍惚间，有某种声音灌入脑内，河水流淌的声音，熟悉到已经习以为常，而忘记其存在的声音。只有在万籁俱寂的夜里，才会意识到它在陪伴，偶尔有几个在远离家乡的辗转难眠的夜还是能听到它，也许我的心有一块是属于它的，这也能解释某些时候有隐隐的冲动想要在物理意义上与它相聚并流。这条河没有名字，也许有名字但从没见人提起过，它由北到南从只有两条主街道的小县城穿过，沿着地图上的标记它最终会奔流入海。外公家在县城的最北边，在河的右侧，从水泥独栋的一层小门出门隔着条碎石路就可以看到被稀疏的树丛遮挡的河。这外表灰白的水泥房子可能是我四五岁时建起。在这栋房落成之前，外公住在邮政局旁边的员工小院里，我生命早期的大部分记忆都来源于那里，那个在从不记事到依稀记事的年纪，能留下的也就几个闪烁的零散的场景，再仔细的去脑海中挖掘，想要让某些记忆得以重现，也只会更加快速的遗忘那些本就模糊的，让那些还算记起的蒙上美好的幻想的滤镜，最后获取到失真的无人可以辩驳的完美童话。所以我记起的场景都因而呈现在纯洁的来自儿童视角毫无瑕疵的晨光之下，那里有被风轻拂的绣花白色窗帘，风与阳光一同从半开绿色木质百叶窗涌入，时间慢到可以看到停留在空中的丝绒与微尘；有插在前园墙沿的几根竹条上攀爬的豆角，在阳光的照射下豆角和它的茎与叶的嫩绿色表皮又镀上金黄色的光辉；进出房间的父母，摘豆角的外公，那金灿灿的模糊不清的脸庞上是极有感染力的笑容。</p>
+<p>窗上出现碎裂的水珠，眼前场景从暖黄被洗刷成冰冷的灰色，雨不合时宜的出现，以逐渐猛烈的撞击博得关注。猝不及防间防线被突破，它们在不断加速下俯冲扎进了心中的河。河被雨淹没，来不及汹涌澎湃，来不及惊涛骇浪，在淹没中窒息，在窒息中消亡，随它逝去的还有那一段又一段的暖阳。雨，筋疲力竭又悄无声息的遁走，留下一滩被撞烂的淤泥。</p>
+<p>在这场告别仪式中，他的躯壳全程参与，而他却不在这，他的躯壳是这个仪式唯一重要的物品，他是这里的主角，是这场仪式的起因，也是结果，但荒唐的是他自己却不能亲手执行这场对于他的人生如此重要的谢幕。在这样的谢幕里没有人为他回顾过往，没有人结案陈词，没有人做最后总结说句“他过了有意义的人生，他的家人、朋友们爱戴着他”，没有人怎么做。有的只是机械的重复执行一直以来的地方习俗，不认识他的人依旧不认识，认识他的人没能从这场仪式里了解他更多，像是突然被关停的电视节目，没有收尾的音乐。如果这一切只是因为躯体需要被火化，而火化前需要按照习俗去操办这一切，而不是为了纯粹的纪念、缅怀、告别他，那这场仪式所代表的就是让我叹息的。</p>
+<p>再由他人遭遇联想到自己，现在的我不得不有生以来首次直面这种由一个名词带来的不可名状的恐惧。我将我置于死亡的凝视下，那是四下皆为深渊，只此一人而空无一物的世界，在那里睁眼闭眼皆为黑暗，在那里需要不断的蚕食过去的记忆，不断的反刍它们，在那里需要的是忏悔，是对从未活过的人生的忏悔，是不懂是何为人而不去探寻的忏悔。身后的暗井悄然喷发出一连串艰深的问题，使我避无可避，在无数疑问的重压下无法喘息，想要去回答，却只是在脑内盘旋了一些模棱两可的名词与动词，情绪到了嘴边，需要用喉咙发力去喊出那些连自己都无法确信的无比正确的句子，却又被经历过的挫折泼了冷水全都咽了回去。</p>
+<p>“你曾经活过吗？”</p>
+<p>那声音由远到近，振聋发聩，在如此诘问下不自觉的捏紧了拳头，骨节在挤压下发出阵阵响声，全身冰凉……</p>
+<p>抽动那即将瘫软的双腿，下意识的逃出了房间，关上了那扇黄色木门，下楼穿过面色凝重的亲朋，出门踩着满是积水的石阶，上了后山，望着阴霾天空下，奔腾的河水。在流淌的水声中又回到了某年暑假的傍晚，坐在门前的木椅上，淡蓝色的天空前几片粉色云朵，椿树在风的注视下飘摇，树叶的沙沙声中，外公用方言说:</p>
+<p>“你出去逛逛？”</p>
+<p>我说：</p>
+<p>“没事，多陪陪你。”</p>
 
 
         <hr>
@@ -374,19 +342,12 @@
         <ul class="pager">
           
           <li>
-            <a class="non-border" href="/undefined/Anti-Wasteman-System/" title="如何规划个人目标并为之行动？">
-              <span>&gt; </span>
-              如何规划个人目标并为之行动？
-            </a>
-          </li>
-          
-          
-          <li>
             <a class="non-border" href="/undefined/Factfulness/" title="十种思维错误及应对建议">
-              <span>&gt; </span> 
+              <span>&gt; </span>
               十种思维错误及应对建议
             </a>
           </li>
+          
           
         </ul>
 

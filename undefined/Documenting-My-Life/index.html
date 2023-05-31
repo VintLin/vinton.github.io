@@ -111,10 +111,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://vinton.store/undefined/How-to-pull-request-on-Github/">
+  <link rel="canonical" href="https://vinton.store/undefined/Documenting-My-Life/">
   <title>
     
-      如何在Github上发起一个Pull Request？ - Vint
+      Documenting My Life - Vint
     
   </title>
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -282,10 +282,10 @@
         ">
           
           <div class="post-heading">
-            <h1 class="fancy-undeline">如何在Github上发起一个Pull Request？</h1>
+            <h1 class="fancy-undeline">Documenting My Life</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
-              May 11, 2023
+              May 31, 2023
             </span>
           </div>
           
@@ -322,69 +322,77 @@
         col-md-8 col-md-offset-2
         post-container">
 
-        <p>因为受到<a target="_blank" rel="noopener" href="https://antfu.me/posts/about-yak-shaving-zh">Yak Shaving</a>的启发，打算为开源项目贡献一份力。以下是记录在Github上发起Pull Request时碰到的问题。</p>
-<h1 id="什么是Pull-Request"><a href="#什么是Pull-Request" class="headerlink" title="什么是Pull Request?"></a>什么是Pull Request?</h1><p>Pull Request是向代码仓库贡献代码的方式。</p>
-<p>Pull Request通常步骤如下：</p>
-<ul>
-<li>复制（Fork）代码仓库到你自己的Github账号下。</li>
-<li>因为这个复制的代码仓库在你自己的账号下，所以你有完整的权限，你就可以在此之上进行修改。</li>
-<li>将修改内容提交（Push）到自己的代码仓库中。</li>
-<li>发送消息（Pull Request）告知原作者，让他知道你的修改内容。</li>
-<li>由原作者来合并（Merge）你的修改到他的代码仓库中。</li>
-</ul>
-<blockquote>
-<p>什么是Fork?</p>
-<p>当我们喜欢某个代码仓库时，希望能将它添加到自己的Github账号下时，我们会使用Fork，以便单独使用它。</p>
-<p>当我们Fork一个代码仓库时，我们会得到这个代码仓库的完整代码。之后就可以以此为基础进行修改，而不会影响到原仓库，而想要让修改同步到原仓库就需要对原仓库提交PR。</p>
-</blockquote>
-<h1 id="如何提交Pull-Reqeust？"><a href="#如何提交Pull-Reqeust？" class="headerlink" title="如何提交Pull Reqeust？"></a>如何提交Pull Reqeust？</h1><p>以<a target="_blank" rel="noopener" href="https://github.com/yihong0618">yihong</a>的<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">running_page</a>项目为例，<a target="_blank" rel="noopener" href="https://github.com/VintLin">我</a>要如何发起Pull Request：</p>
-<h2 id="1-创建Fork"><a href="#1-创建Fork" class="headerlink" title="1. 创建Fork"></a>1. 创建Fork</h2><p>点击仓库上方的 <strong>「Fork」</strong>：<br><img src="Fork_1.jpg" alt="Fork"></p>
-<p>配置相关参数，之后点击 <strong>「Create fork」</strong>：<br><img src="Fork_2.jpg" alt="Create Fork"></p>
-<p>这样我就在自己的Github账号下创建了一个Fork仓库：<br><img src="Fork_3.jpg" alt="New Project"></p>
-<h2 id="2-修改代码"><a href="#2-修改代码" class="headerlink" title="2. 修改代码"></a>2. 修改代码</h2><p>先获取Fork仓库的Git地址：<br><img src="Push_1.jpg" alt="Get Url"></p>
-<p>在本地使用<code>git clone</code>获取代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git <span class="built_in">clone</span> https://github.com/VintLin/Running.git</span></span><br></pre></td></tr></table></figure>
-<p>修改代码后使用 <code>git commit</code> 提交代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git commit -m <span class="string">&quot;commit: update something&quot;</span></span></span><br></pre></td></tr></table></figure>
-<p>最后使用 <code>git push</code> 更新远端的代码仓库：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git push -u origin master</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-发起Pull-Request"><a href="#3-发起Pull-Request" class="headerlink" title="3. 发起Pull Request"></a>3. 发起Pull Request</h2><p>回到原来的代码仓库下，到 <strong>「Pull requests」</strong> 页面，点击 <strong>「New pull request」</strong>：<br><img src="PR_1.jpg" alt="Pull Request"></p>
-<p>点击 <strong>「compare across forks」</strong>，选择代码仓库(VintLin/Running)和分支(master)，点击 <strong>「Create pull request」</strong>：<br><img src="PR_2.jpg" alt="Pull Request"></p>
-<p>填写 <strong>标题</strong>以及 <strong>补充信息</strong>，最后点击 <strong>「Create pull request」</strong>：<br><img src="PR_3.jpg" alt="Pull Request"></p>
-<p>最后，在原仓库下的 <strong>Pull requests</strong>页面中就可以看到你的PR啦，之后等待仓库拥有者同意就好了~</p>
-<h1 id="如何同步原仓库的代码到Fork的仓库中？"><a href="#如何同步原仓库的代码到Fork的仓库中？" class="headerlink" title="如何同步原仓库的代码到Fork的仓库中？"></a>如何同步原仓库的代码到Fork的仓库中？</h1><p>在你Fork后原仓库有更新时，Fork的代码仓库并不会跟着更新，当你提交PR时会发现有代码冲突。</p>
-<p>此时有两种方法来解决这个问题：</p>
+        <p>Regarding how I currently document my life, I would like to provide a comprehensive account.</p>
+<p>My daily recording mainly consists of two parts: accounting and weekly notes, both of which are recorded in Notion.</p>
+<h1 id="Accounting"><a href="#Accounting" class="headerlink" title="Accounting"></a>Accounting</h1><p>Notion provides various ways to display data, making it convenient, easy, and efficient to view my data records.</p>
+<p>In terms of accounting, I do the following:</p>
 <ol>
-<li>删除你的Fork仓库，重新创建Fork进行Pull Request。</li>
-<li>将原仓库的更新内容合并（Merge）到你的Fork仓库中。</li>
+<li><strong>Daily (10 minutes)</strong>: I record daily expenses and income. Typically, I do this on my computer each morning. (Payment records come from AliPay or WeChat Pay).</li>
+<li><strong>Weekends (20-35 minutes)</strong>: I review the week’s expenses and income and make a weekly summary (total weekly expenses, consumption tendencies).</li>
+<li>Based on the <strong>summary</strong> in step two, I can selectively adjust my spending habits.</li>
 </ol>
-<p>第一个方法这里就不多做赘述了，这边简单讲讲第二种方法。</p>
-<h2 id="1-在Fork仓库中新增远端仓库"><a href="#1-在Fork仓库中新增远端仓库" class="headerlink" title="1. 在Fork仓库中新增远端仓库"></a>1. 在Fork仓库中新增远端仓库</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打开Fork仓库的本地路径</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="built_in">cd</span> &lt;Fork仓库的本地路径&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新增远端仓库（upstream），此仓库指向原仓库，此处即使用：</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">https://github.com/yihong0618/running_page.git</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git remote add upstream &lt;原仓库Git地址&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">检查分支信息</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git branch -a</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-从远端仓库获取最新的提交历史和文件更改"><a href="#2-从远端仓库获取最新的提交历史和文件更改" class="headerlink" title="2. 从远端仓库获取最新的提交历史和文件更改"></a>2. 从远端仓库获取最新的提交历史和文件更改</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git fetch upstream</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-将原仓库更改内容同步Fork仓库"><a href="#3-将原仓库更改内容同步Fork仓库" class="headerlink" title="3. 将原仓库更改内容同步Fork仓库"></a>3. 将原仓库更改内容同步Fork仓库</h2><p>到此步骤即可在本地解决代码冲突，之后进行Pull Request。</p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/">How to make your first pull request on GitHub</a></li>
-<li><a target="_blank" rel="noopener" href="https://gitbook.tw/chapters/github/pull-request">與其它開發者的互動 - 使用 Pull Request（PR）</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/selfteaching/the-craft-of-selfteaching/issues/67">Github进行fork后如何与原仓库同步</a></li>
+<p>Benefits of accounting for me:</p>
+<ol>
+<li><strong>Achieving Goals</strong>: By recording financial data and setting a reasonable budget, I can better track the progress of personal goals such as travel, home buying, education funds, etc.</li>
+<li><strong>Controlling Expenditure</strong>: By recording each expenditure, I can better understand my spending habits and tendencies, identify unnecessary expenses and spending leaks, and make corresponding adjustments.</li>
+</ol>
+<h2 id="Account-Overview"><a href="#Account-Overview" class="headerlink" title="Account Overview"></a>Account Overview</h2><p>Usually, I select a date in the calendar section of the overview to record that day’s expenses and income.</p>
+<p><img src="bill.jpeg" alt="Bill"></p>
+<h2 id="Weekly-Review"><a href="#Weekly-Review" class="headerlink" title="Weekly Review"></a>Weekly Review</h2><p>Clicking on <strong>“Accounts”</strong> in the account overview displays all recorded account details.</p>
+<p>My current accounts mainly record several pieces of information: <strong>items</strong>, <strong>date</strong>, <strong>expenses</strong>, <strong>income</strong>, <strong>location</strong>.</p>
+<p>In Notion, I can select and query the entered data, thus easily viewing the <strong>“daily, weekly, monthly consumption”</strong> and <strong>“extra consumption”</strong> situations.</p>
+<p><img src="bill_2.jpg" alt="Bill"></p>
+<h1 id="Weekly-Notes"><a href="#Weekly-Notes" class="headerlink" title="Weekly Notes"></a>Weekly Notes</h1><p>Regarding weekly notes, I do the following:</p>
+<ul>
+<li><strong>Daily</strong>: I open the weekly note recording page when I turn on my computer. Since I spend most of my time in front of the computer each day, I jot down sudden thoughts, recently learned knowledge, daily activities, and the day’s mood in my weekly notes.</li>
+<li><strong>Weekends</strong>: I review the week and selectively adjust my future action strategy.</li>
 </ul>
+<p>Benefits of weekly notes for me:</p>
+<ul>
+<li><strong>Self-reflection and Growth</strong>: Weekly notes allow me to reflect on the past week’s experiences, actions, and decisions. By reviewing my actions and thoughts, I can better understand my behavioral patterns, habits, and preferences. This self-reflection promotes personal growth.</li>
+<li><strong>Goal Setting and Progress Evaluation</strong>: I use weekly notes to track and record my goal completion. This helps maintain clarity and motivation for goals, and the weekend summary provides an opportunity for continuous self-supervision and evaluation.</li>
+<li><strong>Retrospection</strong>: I can trace back previous thoughts to understand personal changes. This retrospection process might make me realize that some of my current habits or opinions originated from seemingly insignificant past events. Being able to see changes in myself more intuitively also increases my sense of self-efficacy.</li>
+</ul>
+<h2 id="Weekly-Notes-Overview"><a href="#Weekly-Notes-Overview" class="headerlink" title="Weekly Notes Overview"></a>Weekly Notes Overview</h2><p>I generally create a new weekly note document <strong>each week</strong> and record personal data in this document throughout the week.</p>
+<p><img src="live_1.jpeg" alt="Bill"></p>
+<h2 id="Weekly-Notes-1"><a href="#Weekly-Notes-1" class="headerlink" title="Weekly Notes"></a>Weekly Notes</h2><p>Currently, I divide the content of my weekly notes into four sections:</p>
+<ul>
+<li><strong>Daily Records</strong>: Only record daily activities without outputting thoughts.<ul>
+<li>Study / Life / Work</li>
+</ul>
+</li>
+<li><strong>Thought Output</strong>: Record thoughts on daily activities as well as current emotional state.<ul>
+<li>Views / Life / Emotions</li>
+</ul>
+</li>
+<li><strong>Resource Input</strong>: Record useful information, tools, or significant news events.<ul>
+<li>Knowledge / Tools / Environment</li>
+</ul>
+</li>
+<li><strong>Summary</strong>: Record of weekend reviews, tracking of goal completion, current savings balance, and thoughts on the week.<ul>
+<li>Goals / Balance / Thoughts</li>
+</ul>
+</li>
+</ul>
+<p><img src="live_2.jpeg" alt="Bill"></p>
+<blockquote>
+<p>“In conclusion, mindful documentation of our lives isn’t just a reflection of where we stand, but an indispensable roadmap guiding us toward the person we aspire to be.</p>
+<p>By diligently maintaining a clear and organized account of our financial activity, we gain the ability to manage and shape our financial future with precision. Meanwhile, the practice of weekly note-taking offers an avenue for introspection and growth, allowing us to refine our goals and enhance our self-understanding.</p>
+<p>In this dynamic interplay between objective accounting and subjective introspection, we find a harmonious balance that drives personal improvement and cultivates an elevated sense of self-awareness.</p>
+<p>The power of this mindful documentation is not just its ability to capture the past or outline the present, but its potential to project and shape our future. To paraphrase the ancient wisdom of Lao Tzu, knowing others is wisdom, but knowing the self is enlightenment. Herein lies the profound beauty of this journey, a continuous cycle of self-discovery and self-improvement that propels us forward, navigating the intricate tapestry of life.”</p>
+<p>from ChatGPT 2023.05.31</p>
+</blockquote>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li>
-            <a class="non-border" href="/undefined/Anti-Wasteman-System/" title="如何规划个人目标并为之行动？">
-              <span>&gt; </span>
-              如何规划个人目标并为之行动？
-            </a>
-          </li>
-          
           
           <li>
-            <a class="non-border" href="/undefined/Factfulness/" title="十种思维错误及应对建议">
+            <a class="non-border" href="/undefined/About-A-Friend-On-A-Voyage/" title="结束的话语，停留在风中">
               <span>&gt; </span> 
-              十种思维错误及应对建议
+              结束的话语，停留在风中
             </a>
           </li>
           

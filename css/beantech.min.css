@@ -1,9 +1,15 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   color: #222;
   font-weight: 400;
   font-size: 16px;
   line-height: 2em;
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: overlay;
   -webkit-font-smoothing: antialiased;
@@ -11,6 +17,11 @@ body {
   text-rendering: optimizeLegibility;
   transition: background-color .3s ease-in-out;
   overscroll-behavior: none;
+  background-attachment: fixed;
+}
+
+.background-box {
+  height: 100%;
 }
 
 .container {
@@ -59,9 +70,7 @@ strong {
 .p,
 p,
 .ol,
-ol,
-.ul,
-ul {
+ol {
   margin-top: 0.8em;
 }
 
@@ -82,6 +91,23 @@ h4 {
   font-size: 1.0em;
 }
 
+.fancy-undeline {
+  background-image: linear-gradient(120deg, #FF512F,#F09819 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 80%;
+  transition: background-size 0.25s ease-in;
+  display: inline-block;
+  padding-top: 0.35em;
+  padding-bottom: 0.2em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fancy-undeline:hover {
+  background-size: 100% 88% !important;
+}
+
 blockquote {
   display: block;
   font-style: italic;
@@ -90,7 +116,7 @@ blockquote {
   margin: 1.2em 0em 0em 0em;
   padding: 0.8em 1.2em;
   opacity: .8;
-  border-left: 5px solid #7a7a7a;
+  border-left: 3px solid #7a7a7a;
 }
 
 blockquote p,
@@ -171,6 +197,18 @@ a:hover,
 #tag_cloud a:hover {
   color: #222;
 }
+
+/* .post-preview {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -0px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.01);
+  overflow: hidden;
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.067);
+  margin-bottom: 1em;
+  padding: 1.2em 1em;
+} */
 
 .post-preview>a {
   display: block;
@@ -410,6 +448,10 @@ pre code {
   word-wrap: normal;
 }
 
+.navbar-custom .background-box {
+  padding: 0px 25px;
+}
+
 .navbar-custom {
   margin: 0px;
   line-height: 1.7;
@@ -422,12 +464,12 @@ pre code {
   top: 0px;
   left: 0px;
   flex-direction: row;
-  padding: 0px 25px;
   z-index: 2;
   background: rgba(25, 25, 25, 0.533);
   border-bottom: 1px solid rgba(255, 255, 255, 0.067);
   transition: all 0.3s ease-out 0s;
   backdrop-filter: blur(5px);
+  padding: 0px 15px;
 }
 
 .navbar-custom .nav li a,
