@@ -27,13 +27,13 @@
 .body--dark {
   /* Common color */
   --common-color: #eee;
-  --background-color: rgb(13, 17, 23);
+  --background-color: rgb(10, 10, 10);
   --background-color-down: rgb(3, 4, 6);
   --background-image: url(images/grid-dark.svg);
   --direction-color: #161d27;
   --navbar-color: #fff;
   --active-color: rgb(255, 201, 71);
-  --navbar-background-color: rgba(13, 17, 23, 0.533);
+  --navbar-background-color: rgba(5, 5, 5, 0.533);
   --navbar-border-color: rgba(255, 255, 255, 0.067);
 
   --h1-color: rgb(255, 201, 71);
