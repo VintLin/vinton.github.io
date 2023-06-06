@@ -8,11 +8,14 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6695R09FL"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-F6695R09FL');
+      var host = window.location.hostname;
+      if (host !== "localhost") {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+  
+        gtag('config', 'G-F6695R09FL');  
+      }
     </script>
   
 
@@ -22,10 +25,13 @@
       // Originial
       var _hmt = _hmt || [];
       (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?c7be85317623071fc4ef1edd7169c279";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
+        var host = window.location.hostname;
+        if (host !== "localhost") {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?c7be85317623071fc4ef1edd7169c279";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        }
       })();
     </script>
   
@@ -211,12 +217,12 @@
               
           
             <li>
-              <a href="/about/">
+              <a href="/archive/">
                 
-                  <p class="menu-about">
-                    关于
+                  <p class="menu-archives">
+                    归档
                   </p>
-                  <i class="fa-regular fa-address-card menu-about-icon"></i>
+                  <i class="fa-regular fa-newspaper menu-archives-icon"></i>
                 
               </a>
             </li>
@@ -224,12 +230,12 @@
               
           
             <li>
-              <a href="/archive/">
+              <a href="/about/">
                 
-                  <p class="menu-archives">
-                    归档
+                  <p class="menu-about">
+                    关于
                   </p>
-                  <i class="fa-regular fa-newspaper menu-archives-icon"></i>
+                  <i class="fa-regular fa-address-card menu-about-icon"></i>
                 
               </a>
             </li>
@@ -333,7 +339,8 @@
         post-container">
 
         <p>因为受到<a target="_blank" rel="noopener" href="https://antfu.me/posts/about-yak-shaving-zh">Yak Shaving</a>的启发，打算为开源项目贡献一份力。以下是记录在Github上发起Pull Request时碰到的问题。</p>
-<h1 id="什么是Pull-Request"><a href="#什么是Pull-Request" class="headerlink" title="什么是Pull Request?"></a>什么是Pull Request?</h1><p>Pull Request是向代码仓库贡献代码的方式。</p>
+<h1>什么是Pull Request?</h1>
+<p>Pull Request是向代码仓库贡献代码的方式。</p>
 <p>Pull Request通常步骤如下：</p>
 <ul>
 <li>复制（Fork）代码仓库到你自己的Github账号下。</li>
@@ -347,32 +354,48 @@
 <p>当我们喜欢某个代码仓库时，希望能将它添加到自己的Github账号下时，我们会使用Fork，以便单独使用它。</p>
 <p>当我们Fork一个代码仓库时，我们会得到这个代码仓库的完整代码。之后就可以以此为基础进行修改，而不会影响到原仓库，而想要让修改同步到原仓库就需要对原仓库提交PR。</p>
 </blockquote>
-<h1 id="如何提交Pull-Reqeust？"><a href="#如何提交Pull-Reqeust？" class="headerlink" title="如何提交Pull Reqeust？"></a>如何提交Pull Reqeust？</h1><p>以<a target="_blank" rel="noopener" href="https://github.com/yihong0618">yihong</a>的<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">running_page</a>项目为例，<a target="_blank" rel="noopener" href="https://github.com/VintLin">我</a>要如何发起Pull Request：</p>
-<h2 id="1-创建Fork"><a href="#1-创建Fork" class="headerlink" title="1. 创建Fork"></a>1. 创建Fork</h2><p>点击仓库上方的 <strong>「Fork」</strong>：<br><img src="Fork_1.webp" alt="Fork"></p>
-<p>配置相关参数，之后点击 <strong>「Create fork」</strong>：<br><img src="Fork_2.webp" alt="Create Fork"></p>
-<p>这样我就在自己的Github账号下创建了一个Fork仓库：<br><img src="Fork_3.webp" alt="New Project"></p>
-<h2 id="2-修改代码"><a href="#2-修改代码" class="headerlink" title="2. 修改代码"></a>2. 修改代码</h2><p>先获取Fork仓库的Git地址：<br><img src="Push_1.webp" alt="Get Url"></p>
+<h1>如何提交Pull Reqeust？</h1>
+<p>以<a target="_blank" rel="noopener" href="https://github.com/yihong0618">yihong</a>的<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">running_page</a>项目为例，<a target="_blank" rel="noopener" href="https://github.com/VintLin">我</a>要如何发起Pull Request：</p>
+<h2 id="1-创建Fork">1. 创建Fork</h2>
+<p>点击仓库上方的 <strong>「Fork」</strong>：<br>
+<img src="Fork_1.webp" alt="Fork"></p>
+<p>配置相关参数，之后点击 <strong>「Create fork」</strong>：<br>
+<img src="Fork_2.webp" alt="Create Fork"></p>
+<p>这样我就在自己的Github账号下创建了一个Fork仓库：<br>
+<img src="Fork_3.webp" alt="New Project"></p>
+<h2 id="2-修改代码">2. 修改代码</h2>
+<p>先获取Fork仓库的Git地址：<br>
+<img src="Push_1.webp" alt="Get Url"></p>
 <p>在本地使用<code>git clone</code>获取代码：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git <span class="built_in">clone</span> https://github.com/VintLin/Running.git</span></span><br></pre></td></tr></table></figure>
 <p>修改代码后使用 <code>git commit</code> 提交代码：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git commit -m <span class="string">&quot;commit: update something&quot;</span></span></span><br></pre></td></tr></table></figure>
 <p>最后使用 <code>git push</code> 更新远端的代码仓库：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git push -u origin master</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-发起Pull-Request"><a href="#3-发起Pull-Request" class="headerlink" title="3. 发起Pull Request"></a>3. 发起Pull Request</h2><p>回到原来的代码仓库下，到 <strong>「Pull requests」</strong> 页面，点击 <strong>「New pull request」</strong>：<br><img src="PR_1.webp" alt="Pull Request"></p>
-<p>点击 <strong>「compare across forks」</strong>，选择代码仓库(VintLin/Running)和分支(master)，点击 <strong>「Create pull request」</strong>：<br><img src="PR_2.webp" alt="Pull Request"></p>
-<p>填写 <strong>标题</strong>以及 <strong>补充信息</strong>，最后点击 <strong>「Create pull request」</strong>：<br><img src="PR_3.webp" alt="Pull Request"></p>
+<h2 id="3-发起Pull-Request">3. 发起Pull Request</h2>
+<p>回到原来的代码仓库下，到 <strong>「Pull requests」</strong> 页面，点击 <strong>「New pull request」</strong>：<br>
+<img src="PR_1.webp" alt="Pull Request"></p>
+<p>点击 <strong>「compare across forks」</strong>，选择代码仓库(VintLin/Running)和分支(master)，点击 <strong>「Create pull request」</strong>：<br>
+<img src="PR_2.webp" alt="Pull Request"></p>
+<p>填写 <strong>标题</strong>以及 <strong>补充信息</strong>，最后点击 <strong>「Create pull request」</strong>：<br>
+<img src="PR_3.webp" alt="Pull Request"></p>
 <p>最后，在原仓库下的 <strong>Pull requests</strong>页面中就可以看到你的PR啦，之后等待仓库拥有者同意就好了~</p>
-<h1 id="如何同步原仓库的代码到Fork的仓库中？"><a href="#如何同步原仓库的代码到Fork的仓库中？" class="headerlink" title="如何同步原仓库的代码到Fork的仓库中？"></a>如何同步原仓库的代码到Fork的仓库中？</h1><p>在你Fork后原仓库有更新时，Fork的代码仓库并不会跟着更新，当你提交PR时会发现有代码冲突。</p>
+<h1>如何同步原仓库的代码到Fork的仓库中？</h1>
+<p>在你Fork后原仓库有更新时，Fork的代码仓库并不会跟着更新，当你提交PR时会发现有代码冲突。</p>
 <p>此时有两种方法来解决这个问题：</p>
 <ol>
 <li>删除你的Fork仓库，重新创建Fork进行Pull Request。</li>
 <li>将原仓库的更新内容合并（Merge）到你的Fork仓库中。</li>
 </ol>
 <p>第一个方法这里就不多做赘述了，这边简单讲讲第二种方法。</p>
-<h2 id="1-在Fork仓库中新增远端仓库"><a href="#1-在Fork仓库中新增远端仓库" class="headerlink" title="1. 在Fork仓库中新增远端仓库"></a>1. 在Fork仓库中新增远端仓库</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打开Fork仓库的本地路径</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="built_in">cd</span> &lt;Fork仓库的本地路径&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新增远端仓库（upstream），此仓库指向原仓库，此处即使用：</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">https://github.com/yihong0618/running_page.git</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git remote add upstream &lt;原仓库Git地址&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">检查分支信息</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git branch -a</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-从远端仓库获取最新的提交历史和文件更改"><a href="#2-从远端仓库获取最新的提交历史和文件更改" class="headerlink" title="2. 从远端仓库获取最新的提交历史和文件更改"></a>2. 从远端仓库获取最新的提交历史和文件更改</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git fetch upstream</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-将原仓库更改内容同步Fork仓库"><a href="#3-将原仓库更改内容同步Fork仓库" class="headerlink" title="3. 将原仓库更改内容同步Fork仓库"></a>3. 将原仓库更改内容同步Fork仓库</h2><p>到此步骤即可在本地解决代码冲突，之后进行Pull Request。</p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
+<h2 id="1-在Fork仓库中新增远端仓库">1. 在Fork仓库中新增远端仓库</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打开Fork仓库的本地路径</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash"><span class="built_in">cd</span> &lt;Fork仓库的本地路径&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新增远端仓库（upstream），此仓库指向原仓库，此处即使用：</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">https://github.com/yihong0618/running_page.git</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git remote add upstream &lt;原仓库Git地址&gt;</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">检查分支信息</span></span><br><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git branch -a</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-从远端仓库获取最新的提交历史和文件更改">2. 从远端仓库获取最新的提交历史和文件更改</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt; </span><span class="language-bash">git fetch upstream</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-将原仓库更改内容同步Fork仓库">3. 将原仓库更改内容同步Fork仓库</h2>
+<p>到此步骤即可在本地解决代码冲突，之后进行Pull Request。</p>
+<h1>参考链接</h1>
+<ul>
 <li><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/">How to make your first pull request on GitHub</a></li>
 <li><a target="_blank" rel="noopener" href="https://gitbook.tw/chapters/github/pull-request">與其它開發者的互動 - 使用 Pull Request（PR）</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/selfteaching/the-craft-of-selfteaching/issues/67">Github进行fork后如何与原仓库同步</a></li>
