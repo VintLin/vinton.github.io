@@ -99,14 +99,14 @@
   </url>
   
   <url>
-    <loc>https://vinton.store/tags/Notes/</loc>
+    <loc>https://vinton.store/tags/System/</loc>
     <lastmod>2023-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://vinton.store/tags/System/</loc>
+    <loc>https://vinton.store/tags/Notes/</loc>
     <lastmod>2023-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -122,13 +122,6 @@
   </url>
   
   <url>
-    <loc>https://vinton.store/categories/%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2023-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://vinton.store/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
     <lastmod>2023-06-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -136,7 +129,14 @@
   </url>
   
   <url>
-    <loc>https://vinton.store/categories/%E6%96%B9%E6%B3%95/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://vinton.store/categories/%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2023-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://vinton.store/categories/%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2023-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -150,7 +150,7 @@
   </url>
   
   <url>
-    <loc>https://vinton.store/categories/%E9%98%85%E8%AF%BB/</loc>
+    <loc>https://vinton.store/categories/%E6%96%B9%E6%B3%95/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2023-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
