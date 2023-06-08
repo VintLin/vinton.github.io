@@ -6,7 +6,7 @@
   <link href="https://vinton.store/feed.xml" rel="self"/>
   
   <link href="https://vinton.store/"/>
-  <updated>2023-05-27T10:40:00.000Z</updated>
+  <updated>2023-05-30T16:29:00.000Z</updated>
   <id>https://vinton.store/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Documenting My Life</title>
+    <link href="https://vinton.store/post/Documenting-My-Life/"/>
+    <id>https://vinton.store/post/Documenting-My-Life/</id>
+    <published>2023-05-30T16:29:00.000Z</published>
+    <updated>2023-05-30T16:29:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Regarding how I currently document my life, I would like to provide a comprehensive account.</p><p>My daily recording mainly consists of two parts: accounting and weekly journal, both of which are recorded in Notion.</p><h1>Accounting</h1><p>Notion provides various ways to display data, making it convenient, easy, and efficient to view my data records.</p><p>In terms of accounting, I do the following:</p><ol><li><strong>Daily (10 minutes)</strong>: I record daily expenses and income. Typically, I do this on my computer each morning. (Payment records come from AliPay or WeChat Pay).</li><li><strong>Weekends (20-35 minutes)</strong>: I review the week’s expenses and income and make a weekly summary (total weekly expenses, consumption tendencies).</li><li>Based on the <strong>summary</strong> in step two, I can selectively adjust my spending habits.</li></ol><p>Benefits of accounting for me:</p><ol><li><strong>Achieving Goals</strong>: By recording financial data and setting a reasonable budget, I can better track the progress of personal goals such as travel, home buying, education funds, etc.</li><li><strong>Controlling Expenditure</strong>: By recording each expenditure, I can better understand my spending habits and tendencies, identify unnecessary expenses and spending leaks, and make corresponding adjustments.</li></ol><h2 id="Account-Overview">Account Overview</h2><p>Usually, I select a date in the calendar section of the overview to record that day’s expenses and income.</p><p><img src="bill.webp" alt="Bill"></p><h2 id="Weekly-Review">Weekly Review</h2><p>Clicking on <strong>“Accounts”</strong> in the account overview displays all recorded account details.</p><p>My current accounts mainly record several pieces of information: <strong>items</strong>, <strong>date</strong>, <strong>expenses</strong>, <strong>income</strong>, <strong>location</strong>.</p><p>In Notion, I can select and query the entered data, thus easily viewing the <strong>“daily, weekly, monthly consumption”</strong> and <strong>“extra consumption”</strong> situations.</p><p><img src="bill_2.webp" alt="Bill"></p><h1>Weekly Journal</h1><p>Regarding weekly journal, I do the following:</p><ul><li><strong>Daily</strong>: I open the weekly journal recording page when I turn on my computer. Since I spend most of my time in front of the computer each day, I jot down sudden thoughts, recently learned knowledge, daily activities, and the day’s mood in my weekly journals.</li><li><strong>Weekends</strong>: I review the week and selectively adjust my future action strategy.</li></ul><p>Benefits of weekly journals for me:</p><ul><li><strong>Self-reflection and Growth</strong>: Weekly journals allow me to reflect on the past week’s experiences, actions, and decisions. By reviewing my actions and thoughts, I can better understand my behavioral patterns, habits, and preferences. This self-reflection promotes personal growth.</li><li><strong>Goal Setting and Progress Evaluation</strong>: I use weekly journals to track and record my goal completion. This helps maintain clarity and motivation for goals, and the weekend summary provides an opportunity for continuous self-supervision and evaluation.</li><li><strong>Retrospection</strong>: I can trace back previous thoughts to understand personal changes. This retrospection process might make me realize that some of my current habits or opinions originated from seemingly insignificant past events. Being able to see changes in myself more intuitively also increases my sense of self-efficacy.</li></ul><h2 id="Weekly-Journals-Overview">Weekly Journals Overview</h2><p>I generally create a new weekly journal document <strong>each week</strong> and record personal data in this document throughout the week.</p><p><img src="live_1.webp" alt="Bill"></p><h2 id="Weekly-Journal">Weekly Journal</h2><p>Currently, I divide the content of my weekly journal into four sections:</p><ul><li><strong>Daily Records</strong>: Only record daily activities without outputting thoughts.<ul><li>Study / Life / Work</li></ul></li><li><strong>Thought Output</strong>: Record thoughts on daily activities as well as current emotional state.<ul><li>Views / Life / Emotions</li></ul></li><li><strong>Resource Input</strong>: Record useful information, tools, or significant news events.<ul><li>Knowledge / Tools / Environment</li></ul></li><li><strong>Summary</strong>: Record of weekend reviews, tracking of goal completion, current savings balance, and thoughts on the week.<ul><li>Goals / Balance / Thoughts</li></ul></li></ul><blockquote><p>Due to the sensitive nature of the personal information included in my own weekly journal, I have entrusted ChatGPT to generate a revised version of the journal following the format. This revised journal is written from the perspective of an Urban working women.</p></blockquote><p><img src="live_2.webp" alt="Bill"></p><blockquote><p>&quot;In conclusion, mindful documentation of our lives isn’t just a reflection of where we stand, but an indispensable roadmap guiding us toward the person we aspire to be.</p><p>By diligently maintaining a clear and organized account of our financial activity, we gain the ability to manage and shape our financial future with precision. Meanwhile, the practice of weekly note-taking offers an avenue for introspection and growth, allowing us to refine our goals and enhance our self-understanding.</p><p>In this dynamic interplay between objective accounting and subjective introspection, we find a harmonious balance that drives personal improvement and cultivates an elevated sense of self-awareness.</p><p>The power of this mindful documentation is not just its ability to capture the past or outline the present, but its potential to project and shape our future. To paraphrase the ancient wisdom of Lao Tzu, knowing others is wisdom, but knowing the self is enlightenment. Herein lies the profound beauty of this journey, a continuous cycle of self-discovery and self-improvement that propels us forward, navigating the intricate tapestry of life.&quot;</p><p>from ChatGPT 2023.05.31</p></blockquote>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Regarding how I currently document my life, I would like to provide a comprehensive account.&lt;/p&gt;
+&lt;p&gt;My daily recording mainly consists</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://vinton.store/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="System" scheme="https://vinton.store/tags/System/"/>
+    
+  </entry>
   
   <entry>
     <title>结束的话语，停留在风中</title>
