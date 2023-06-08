@@ -22,6 +22,7 @@
 
   --underline-color: rgb(162, 206, 255);
   --underline-color-dark: rgb(0, 120, 255);
+  --logo-color: invert(0%)
 }
 
 .body--dark {
@@ -44,6 +45,7 @@
 
   --underline-color: rgb(74, 83, 97);
   --underline-color-dark: rgb(58, 75, 100);
+  --logo-color: invert(100%)
 }
 
 body,
@@ -131,4 +133,8 @@ blockquote {
 
 .fancy-undeline {
   background-image: linear-gradient(120deg, var(--underline-color-dark),var(--underline-color) 100%);
+}
+
+.navbar-brand>svg {
+  filter: var(--logo-color)
 }

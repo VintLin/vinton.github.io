@@ -343,12 +343,13 @@ a.navbar-brand {
   align-items: center;
 }
 
-.navbar-brand>img {
+.navbar-brand>svg {
   display: inline;
   width: fit-content;
   position: absolute;
-  height: 30px;
+  height: 50px;
   pointer-events: none;
+  transition: filter .3s ease-in-out;
 }
 
 .navbar-header {
